@@ -17,7 +17,11 @@ This is a **Hugo static site** that renders a professional CV from a single YAML
 | `themes/cv-card/layouts/_default/single.html` | Variant pages — same delegation pattern |
 | `themes/cv-card/layouts/_default/baseof.html` | Base HTML shell (head, skip-link, footer) |
 | `hugo.toml` | Hugo configuration |
-| `.gitea/workflows/deploy.yml` | CI/CD: build → PDF → deploy via rsync (Gitea Actions) |
+| `Dockerfile` | Multi-stage build: Hugo + Chromium (builder) → nginx:alpine (server) |
+| `nginx.conf` | nginx config: clean URLs, security headers, asset caching |
+| `docker-compose.yml` | Local dev / server deployment via Docker Compose |
+| `.dockerignore` | Excludes `.git`, `public/`, `resources/` from build context |
+| `.gitea/workflows/deploy.yml` | CI/CD: Docker build → push to registry → SSH pull+run (Gitea Actions) |
 | `.github/skills/job-fitness-review/SKILL.md` | Skill: analyse job fitness, generate tailored variant YAMLs |
 | `.github/skills/cv-variant-sync/SKILL.md` | Skill: propagate base CV edits to all variant files |
 
@@ -44,22 +48,44 @@ hugo server          # Local dev server with live reload
 hugo --gc --minify   # Production build → public/
 ```
 
-## PDF Generation
-The CI/CD pipeline generates a PDF using headless Chrome (`--print-to-pdf`). Locally you can do:
+## Docker
+The site ships as a self-contained Docker image (nginx serving pre-built static files + PDF).
+
 ```bash
-hugo --gc --minify
-chrome --headless --print-to-pdf=public/cv.pdf --print-to-pdf-no-header public/index.html
+# Local preview (builds Hugo + PDF inside the container)
+docker compose up --build
+# → http://localhost:8080
+
+# Build with a real domain
+BASE_URL=https://cv.example.com docker compose up --build
+
+# Build image manually
+docker build --build-arg BASE_URL=https://cv.example.com -t cv .
 ```
-The print CSS (`assets/css/print.css`) controls PDF layout: A4 page size, 15mm/18mm margins, hidden footer, and URL expansion for links.
+
+The `Dockerfile` is a two-stage build:
+1. **builder** (`debian:bookworm-slim`) — installs Hugo Extended + Chromium, runs `hugo --gc --minify`, generates `cv.pdf`
+2. **server** (`nginx:alpine`) — copies only `public/` into a minimal image; `nginx.conf` handles Hugo's clean URLs
+
+## PDF Generation
+PDF is generated inside the Docker build stage via headless Chromium (`--print-to-pdf`). The step is best-effort and logs a warning if Chromium is unavailable rather than failing the build. The print CSS (`assets/css/print.css`) controls layout: A4, 15mm/18mm margins, hidden footer, URL expansion for links.
 
 ## Deployment
-The CI/CD pipeline runs on a **self-hosted Gitea instance** using Gitea Actions (`.gitea/workflows/`). The workflow uses plain shell commands (no GitHub marketplace dependencies) to install Hugo, build the site, generate a PDF via headless Chromium, and deploy via rsync over SSH.
+The CI/CD pipeline runs on a **self-hosted Gitea instance** using Gitea Actions (`.gitea/workflows/`). On every push to `main` it:
+1. Builds the Docker image (Hugo + PDF baked in)
+2. Pushes to a container registry
+3. SSHs to the server and runs `docker pull` + `docker run --restart unless-stopped`
+
+The server needs Docker installed and network access to the registry. No web server config is needed on the host — nginx runs inside the container.
 
 Required Gitea repository secrets (Settings → Actions → Secrets):
+- `REGISTRY_URL` — container registry hostname (e.g. `gitea.example.com`)
+- `REGISTRY_USER` — registry username
+- `REGISTRY_TOKEN` — API token with `packages:read+write` scope
+- `SITE_URL` — public URL of the site (e.g. `https://cv.example.com`) — passed as Hugo `baseURL`
 - `DEPLOY_HOST` — server hostname or IP
 - `DEPLOY_USER` — SSH username
 - `DEPLOY_KEY` — private SSH key (ed25519 recommended)
-- `DEPLOY_PATH` — remote directory (e.g. `/var/www/cv`)
 
 Gitea Actions is largely compatible with GitHub Actions YAML syntax but third-party marketplace actions may not be available. Prefer shell commands over action references when modifying the pipeline.
 

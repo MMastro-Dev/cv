@@ -1,0 +1,9 @@
+.git
+.gitea
+.github
+public/
+resources/
+node_modules/
+*.lock
+.hugo_build.lock
+hugo_stats.json

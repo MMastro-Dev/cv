@@ -66,6 +66,10 @@ cv/
 │       └── _default/
 │           ├── baseof.html       # HTML shell (head, skip-link, footer)
 │           └── single.html       # Variant pages → delegates to partial
+├── Dockerfile                # Multi-stage: Hugo build → nginx serve
+├── docker-compose.yml        # Local preview and production deployment
+├── nginx.conf                # nginx: clean URLs, headers, asset caching
+├── .dockerignore             # Excludes .git, public/, resources/ from build
 ├── .gitea/workflows/deploy.yml   # CI/CD pipeline (Gitea Actions)
 ├── .github/
 │   ├── copilot-instructions.md   # AI agent project context
@@ -123,6 +127,22 @@ hugo server          # Dev server with live reload at http://localhost:1313
 hugo --gc --minify   # Production build → public/
 ```
 
+### Docker (recommended for preview and deploy)
+
+```bash
+# Build and run locally
+docker compose up --build
+# → http://localhost:8080
+
+# Build with your real domain (affects canonical URLs)
+BASE_URL=https://cv.example.com docker compose up --build
+
+# Build image manually
+docker build --build-arg BASE_URL=https://cv.example.com -t cv .
+```
+
+The image is a two-stage build: `debian:bookworm-slim` installs Hugo Extended + Chromium, builds the site and generates `cv.pdf`; then `nginx:alpine` serves only the `public/` output. Final image size is ~25 MB.
+
 ### PDF generation (local)
 
 ```bash
@@ -134,10 +154,11 @@ chrome --headless --print-to-pdf=public/cv.pdf --print-to-pdf-no-header public/i
 
 Push to `main` and the pipeline (`.gitea/workflows/deploy.yml`) will automatically:
 
-1. Install Hugo Extended from GitHub releases
-2. Build the site with `hugo --gc --minify`
-3. Generate `cv.pdf` via headless Chromium
-4. Deploy the `public/` output to your server via rsync over SSH
+1. Build the Docker image (Hugo build + PDF generation baked in)
+2. Push the image to your container registry
+3. SSH to your server and run `docker pull` + `docker run --restart unless-stopped`
+
+No web server config is required on the host — nginx runs inside the container on port 80.
 
 #### Required secrets
 
@@ -145,10 +166,13 @@ Set these in **Gitea → Settings → Actions → Secrets**:
 
 | Secret | Value |
 |--------|-------|
+| `REGISTRY_URL` | Container registry hostname, e.g. `gitea.example.com` |
+| `REGISTRY_USER` | Registry username |
+| `REGISTRY_TOKEN` | API token with `packages:read+write` scope |
+| `SITE_URL` | Public URL of the site, e.g. `https://cv.example.com` |
 | `DEPLOY_HOST` | Server hostname or IP |
 | `DEPLOY_USER` | SSH username |
 | `DEPLOY_KEY` | Private SSH key (ed25519 recommended) |
-| `DEPLOY_PATH` | Remote directory, e.g. `/var/www/cv` |
 
 ---
 

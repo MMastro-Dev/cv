@@ -1,0 +1,11 @@
+services:
+  cv:
+    build:
+      context: .
+      args:
+        # Override with your public domain for production:
+        #   BASE_URL=https://cv.example.com docker compose up --build
+        BASE_URL: http://localhost:8080
+    ports:
+      - "8080:80"
+    restart: unless-stopped
