@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://cv.mmastro.dev/'
 languageCode = 'en-us'
-title = 'CV — Your Name'
+title = 'CV — Maximilian Mastrogiacomo'
 theme = 'cv-card'
 
 # Disable unused taxonomy pages
@@ -16,4 +16,4 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   description = 'Professional CV / Resume'
-  author = 'Your Name'
+  author = 'Maximilian Mastrogiacomo'
