@@ -13,7 +13,7 @@ This is a **Hugo static site** that renders a professional CV from a single YAML
 | `themes/cv-card/layouts/index.html` | Main template that renders `cv.yaml` data |
 | `themes/cv-card/layouts/_default/baseof.html` | Base HTML shell (head, skip-link, footer) |
 | `hugo.toml` | Hugo configuration |
-| `.github/workflows/deploy.yml` | CI/CD: build → PDF → deploy via rsync |
+| `.gitea/workflows/deploy.yml` | CI/CD: build → PDF → deploy via rsync (Gitea Actions) |
 
 ## Key Conventions
 
@@ -45,11 +45,15 @@ chrome --headless --print-to-pdf=public/cv.pdf --print-to-pdf-no-header public/i
 The print CSS (`assets/css/print.css`) controls PDF layout: A4 page size, 15mm/18mm margins, hidden footer, and URL expansion for links.
 
 ## Deployment
-The GitHub Actions workflow deploys via rsync over SSH. Required repository secrets:
+The CI/CD pipeline runs on a **self-hosted Gitea instance** using Gitea Actions (`.gitea/workflows/`). The workflow uses plain shell commands (no GitHub marketplace dependencies) to install Hugo, build the site, generate a PDF via headless Chromium, and deploy via rsync over SSH.
+
+Required Gitea repository secrets (Settings → Actions → Secrets):
 - `DEPLOY_HOST` — server hostname or IP
 - `DEPLOY_USER` — SSH username
-- `DEPLOY_KEY` — private SSH key
+- `DEPLOY_KEY` — private SSH key (ed25519 recommended)
 - `DEPLOY_PATH` — remote directory (e.g. `/var/www/cv`)
+
+Gitea Actions is largely compatible with GitHub Actions YAML syntax but third-party marketplace actions may not be available. Prefer shell commands over action references when modifying the pipeline.
 
 ## When Modifying Templates
 - Keep the semantic HTML structure: `<header>`, `<section>`, `<article>`, `<dl>` for skills
