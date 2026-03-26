@@ -13,11 +13,12 @@ personal:
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
 #  github: "https://github.com/yourusername"
   summary: >
-    Software developer with 5+ years of professional experience at AlmavivA,
-    delivering frontend and full-stack solutions for major Italian public-sector
-    clients (INPS, Guardia di Finanza, Sogei) and enterprise accounts (Stellantis).
-    Proficient in React, TypeScript, C# and .NET; experienced in agile teams,
-    test-driven development and SharePoint platform engineering.
+    Frontend software developer with 5+ years of experience building accessible,
+    responsive web applications in React, TypeScript and C# for large-scale
+    public-sector and enterprise platforms. Proven track record delivering
+    production-grade UI in agile teams across regulated environments (public
+    administration, finance, automotive). Strong grasp of REST API integration,
+    test-driven development and code review practices.
 
 experience:
   # Multi-project entry: use 'projects' to list distinct clients/engagements
@@ -30,18 +31,18 @@ experience:
         role: "Frontend Developer"
         period: "Jun 2025 — Present"
         highlights:
-          - "Development, implementation and testing of a web application for social welfare benefits management"
-          - "Built reusable UI components in React JS against an existing REST API layer"
-          - "Collaborated in an agile team following test-driven development practices"
-        tech: ["React JS", "JavaScript", "HTML/CSS"]
+          - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
+          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements"
+          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
+        tech: ["React JS", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "Copilot / AI-assisted development"]
 
       - client: "Sogei — SW Technology Innovation"
         role: "Frontend Developer"
         period: "Dec 2023 — Jun 2025"
         highlights:
-          - "Developed and maintained a section of a public-facing government web portal"
-          - "Implemented accessible, responsive UI components in React JS"
-          - "Participated in code reviews and automated testing cycles"
+          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Drove code quality through systematic code reviews and automated testing cycles"
         tech: ["React JS", "JavaScript"]
 
       - client: "INPS — Portale INPS"
@@ -97,9 +98,9 @@ skills:
   - category: "Languages"
     items: ["JavaScript", "TypeScript", "C#", "Python", "SQL", "Java"]
   - category: "Frameworks & Platforms"
-    items: ["React JS", ".NET", "SharePoint Online", "SharePoint 2019"]
+    items: ["React JS", "Node.js", ".NET", "SharePoint Online", "SharePoint 2019", "Hugo", "SCSS"]
   - category: "Tools & Infrastructure"
-    items: ["Visual Studio", "Linux", "Git", "ServiceNow / Drive IT", "Apache Tomcat"]
+    items: ["Visual Studio", "Linux", "Git", "ServiceNow / Drive IT", "Apache Tomcat", "Docker", "CI/CD pipelines"]
   - category: "Practices"
     items: ["TDD", "Agile / Scrum", "Code Review", "Ticket Management", "REST APIs"]
 
