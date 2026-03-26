@@ -1,0 +1,127 @@
+# ============================================================
+# CV DATA — Canonical Web Frontend Engineer variant
+# Tailored to: Canonical / Ubuntu Web Frontend Engineer role
+# Base: cv.yaml — changes: title, summary, skill order
+# ============================================================
+
+personal:
+  name: "Maximilian Mastrogiacomo"
+  title: "Web Frontend Developer"
+  email: "maximilian.mastrogiacomo@gmail.com"
+  phone: "+39 3455852920"
+  location: "Rome, Italy"
+  website: "https://mmastro.dev"
+  linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
+#  github: "https://github.com/yourusername"
+  summary: >
+    Frontend developer with 5+ years of experience building accessible,
+    responsive web applications in React and TypeScript for large-scale
+    public-sector and enterprise platforms. Deep commitment to open-source
+    values, WCAG accessibility standards and clean, maintainable code.
+    Comfortable in distributed, async-first environments; experienced working
+    across Linux-based toolchains, CI/CD pipelines and REST API-driven
+    architectures. Proven track record delivering production-grade UI in
+    cross-functional agile teams.
+
+experience:
+  - company: "AlmavivA S.p.A."
+    period: "Oct 2020 — Present"
+    location: "Rome, Italy"
+    projects:
+      - client: "INPS — Ammortizzatori Sociali (Omnia)"
+        role: "Frontend Developer"
+        period: "Jun 2025 — Present"
+        highlights:
+          - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
+          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements"
+          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
+        tech: ["React JS", "TypeScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "Copilot / AI-assisted development"]
+
+      - client: "Sogei — SW Technology Innovation"
+        role: "Frontend Developer"
+        period: "Dec 2023 — Jun 2025"
+        highlights:
+          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Drove code quality through systematic code reviews and automated testing cycles"
+        tech: ["React JS", "TypeScript", "JavaScript"]
+
+      - client: "INPS — Portale INPS"
+        role: "Frontend Developer"
+        period: "Sep 2023 — Nov 2023"
+        highlights:
+          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Integrated React components with existing backend services via REST APIs"
+        tech: ["React JS", ".NET", "Visual Studio"]
+
+      - client: "Guardia di Finanza — Anagrafe Unica del Contribuente"
+        role: "Frontend Developer"
+        period: "Oct 2022 — Sep 2023"
+        highlights:
+          - "Assisted in frontend development of the taxpayer registry system"
+          - "Defined test cases and contributed to project technical specifications"
+          - "Performed functional testing and collaudation"
+        tech: ["React JS", "SQL", "Visual Studio"]
+
+      - client: "FCA / Stellantis — Global Connectivity Platform"
+        role: "Technical Operations Developer"
+        period: "Sep 2021 — Feb 2024"
+        highlights:
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
+          - "Developed Python automation scripts to streamline operational workflows"
+          - "Supported business continuity and capacity management activities"
+        tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
+
+      - client: "INPS — SW Technology Innovation (Knowledge Management)"
+        role: "SharePoint Developer"
+        period: "Mar 2021 — Nov 2021"
+        highlights:
+          - "Designed and developed INPS's internal Knowledge Management platform on SharePoint Online and SharePoint 2019"
+          - "Programmed in PowerShell, C#, JavaScript and TypeScript for platform customisation"
+        tech: ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
+
+      - client: "INPS — SW Technology Innovation (Agorà Social Network)"
+        role: "SharePoint Developer"
+        period: "Oct 2020 — Mar 2021"
+        highlights:
+          - "Contributed to the development of 'Agorà', INPS's internal social network platform"
+          - "Built features using SharePoint Online/2019 with React JS and C# customisations and pure JavaScript for certain external plugins"
+          - "Handled development, testing and maintenance tasks across the full feature lifecycle"
+        tech: ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
+
+education:
+  - institution: "ITIS G. Armellini — Rome"
+    degree: "Technical High School Diploma — Computer Science & Telecommunications"
+    period: "2016 — 2020"
+    notes: ""
+
+skills:
+  - category: "Languages"
+    items: ["TypeScript", "JavaScript", "Python", "C#", "SQL", "Java"]
+  - category: "Frameworks & Platforms"
+    items: ["React JS", "SCSS", "Node.js", "Hugo", ".NET", "SharePoint Online", "SharePoint 2019"]
+  - category: "Tools & Infrastructure"
+    items: ["Git", "Linux", "Docker", "CI/CD pipelines", "Visual Studio", "Apache Tomcat", "ServiceNow / Drive IT"]
+  - category: "Practices"
+    items: ["WCAG / Accessibility", "TDD", "Code Review", "Agile / Scrum", "REST APIs", "Ticket Management"]
+
+languages:
+  - name: "Italian"
+    level: "Native"
+  - name: "English"
+    level: "Fluent (C2 — First Certificate in English)"
+  - name: "French"
+    level: "Basic (A2)"
+
+certifications:
+  - name: "Linux Green Software for Practitioners (LFC131)"
+    issuer: "Linux Foundation"
+    year: "2023"
+  - name: "Microsoft Azure AI Fundamentals (AI-900)"
+    issuer: "Microsoft"
+    year: "2020"
+
+interests:
+  - "Open-source contributions"
+  - "Amateur writing & storytelling"
+  - "Technology & innovation"

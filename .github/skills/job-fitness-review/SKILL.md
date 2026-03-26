@@ -94,6 +94,28 @@ After the table, list the **3-5 CV changes** that would improve the score for th
 
 Ask: "Would you like the full 4-step report for any of these roles?" Then run the Full Single-Job Report for whichever the user selects.
 
+### Step B5 — Offer tailored CV variants
+
+After the comparison table and action list, highlight the top contenders (score ≥ 7 or marked ⭐) and ask:
+
+> "Would you like tailored CV variants for any of these roles? I can create a `assets/data/cv.{slug}.yaml` + `content/{slug}.md` for each one you pick."
+
+List the eligible roles as a numbered menu so the user can reply with numbers (e.g. "1, 3") or "all top picks".
+
+For each selected role, derive the slug from company + role in kebab-case, then:
+
+1. Read `assets/data/cv.yaml` as the base
+2. Apply the role-specific improvements identified during analysis: rewritten summary, reordered/updated skills, any missing keywords added naturally — stay truthful
+3. Write the result to `assets/data/cv.{slug}.yaml` — include a comment header identifying the target role
+4. Create `content/{slug}.md` with front matter:
+   ```yaml
+   ---
+   title: "CV — {Company} {Role}"
+   dataFile: "cv.{slug}"
+   ---
+   ```
+5. After all files are created, confirm each pair and list the URLs they will build to (`/{slug}/`)
+
 ---
 
 ## Full Single-Job Report (1 job)
@@ -129,6 +151,26 @@ Categories: Hard skills · Soft skills / behaviours · Domain terms · Action ve
 - **Honest check**: confirm all suggestions remain truthful
 
 End with a prioritised **Action List** of the top 5 changes to make in `cv.yaml` for this application.
+
+### Step 5 — Offer tailored CV variant
+
+After delivering the action list, ask:
+
+> "Would you like me to create a tailored CV variant for this role? I'll generate `assets/data/cv.{slug}.yaml` and `content/{slug}.md` with the improvements applied — ready to build as a separate page."
+
+If the user agrees, derive the slug from company + role in kebab-case (e.g. `canonical-frontend`), then:
+
+1. Read `assets/data/cv.yaml` as the base
+2. Apply all Step 3 improvements: rewritten summary, reordered/updated skills, any missing keywords added naturally
+3. Write the result to `assets/data/cv.{slug}.yaml` — include a comment header identifying the target role
+4. Create `content/{slug}.md` with front matter:
+   ```yaml
+   ---
+   title: "CV — {Company} {Role}"
+   dataFile: "cv.{slug}"
+   ---
+   ```
+5. Confirm both files are created and tell the user the page will build at `/{slug}/`
 
 ---
 
