@@ -3,7 +3,16 @@
 
 {{/* ── Header / Business Card ── */}}
 <header class="card" role="banner">
-  <h1 class="card__name">{{ $cv.personal.name }}</h1>
+  {{ $fname := replace $cv.personal.name " " "_" }}
+  {{ $date := now.Format "2006-01-02" | replaceRE `\s` "_" }}
+  {{ $dlName := printf "%s_%s_CV.pdf" $fname $date }}
+  <div class="card__name-row">
+    <h1 class="card__name">{{ $cv.personal.name }}</h1>
+    <a class="card__download" href="/cv.pdf" download="{{ $dlName }}">
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Download CV
+    </a>
+  </div>
   <p class="card__title">{{ $cv.personal.title }}</p>
 
   <ul class="card__contact" aria-label="Contact information">
@@ -59,6 +68,38 @@
 <section class="section" aria-labelledby="experience-heading">
   <h2 id="experience-heading" class="section__title">Experience</h2>
   {{ range . }}
+  {{ if .projects }}
+  {{/* Multi-project entry: one employer, many clients/engagements */}}
+  <article class="entry entry--multi">
+    <div class="entry__header">
+      <h3 class="entry__company">{{ .company }}</h3>
+      <span class="entry__period" aria-label="Period">{{ .period }}</span>
+    </div>
+    {{ with .location }}<p class="entry__org">{{ . }}</p>{{ end }}
+    <div class="entry__projects">
+      {{ range .projects }}
+      <div class="entry__project">
+        <div class="entry__header">
+          <h4 class="entry__role">{{ .role }}</h4>
+          <span class="entry__period" aria-label="Period">{{ .period }}</span>
+        </div>
+        {{ with .client }}<p class="entry__client">{{ . }}</p>{{ end }}
+        {{ with .highlights }}
+        <ul class="entry__list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+        {{ with .tech }}
+        <ul class="entry__tech" aria-label="Technologies used">
+          {{ range . }}<li class="entry__tech-tag">{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </article>
+  {{ else }}
+  {{/* Standard single-role entry */}}
   <article class="entry">
     <div class="entry__header">
       <h3 class="entry__role">{{ .role }}</h3>
@@ -71,6 +112,7 @@
     </ul>
     {{ end }}
   </article>
+  {{ end }}
   {{ end }}
 </section>
 {{ end }}

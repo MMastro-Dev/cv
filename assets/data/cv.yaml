@@ -4,71 +4,122 @@
 # ============================================================
 
 personal:
-  name: "Your Name"
-  title: "Your Professional Title"
-  email: "your.email@example.com"
-  phone: "+39 000 000 0000"
-  location: "City, Country"
-  website: "https://yourwebsite.com"
-  linkedin: "https://linkedin.com/in/yourprofile"
-  github: "https://github.com/yourusername"
+  name: "Maximilian Mastrogiacomo"
+  title: "Software Developer"
+  email: "maximilian.mastrogiacomo@gmail.com"
+  phone: "+39 3455852920"
+  location: "Rome, Italy"
+  website: "https://mmastro.dev"
+  linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
+#  github: "https://github.com/yourusername"
   summary: >
-    A brief professional summary (2-3 sentences) describing your key
-    strengths, experience level, and what you bring to a role. Keep it
-    concise and impactful.
+    Software developer with 5+ years of professional experience at AlmavivA,
+    delivering frontend and full-stack solutions for major Italian public-sector
+    clients (INPS, Guardia di Finanza, Sogei) and enterprise accounts (Stellantis).
+    Proficient in React, TypeScript, C# and .NET; experienced in agile teams,
+    test-driven development and SharePoint platform engineering.
 
 experience:
-  - company: "Company Name"
-    role: "Job Title"
-    period: "Jan 2023 — Present"
-    location: "City, Country"
-    highlights:
-      - "Led a team of 5 engineers to deliver a critical platform migration on schedule"
-      - "Reduced infrastructure costs by 30% through architecture optimisation"
-      - "Introduced CI/CD pipelines that cut deployment time from hours to minutes"
+  # Multi-project entry: use 'projects' to list distinct clients/engagements
+  # under a single employer. Each project has its own role, period and highlights.
+  - company: "AlmavivA S.p.A."
+    period: "Oct 2020 — Present"
+    location: "Rome, Italy"
+    projects:
+      - client: "INPS — Ammortizzatori Sociali (Omnia)"
+        role: "Frontend Developer"
+        period: "Jun 2025 — Present"
+        highlights:
+          - "Development, implementation and testing of a web application for social welfare benefits management"
+          - "Built reusable UI components in React JS against an existing REST API layer"
+          - "Collaborated in an agile team following test-driven development practices"
+        tech: ["React JS", "JavaScript", "HTML/CSS"]
 
-  - company: "Previous Company"
-    role: "Previous Job Title"
-    period: "Mar 2020 — Dec 2022"
-    location: "City, Country"
-    highlights:
-      - "Designed and implemented RESTful APIs serving 10k+ requests/minute"
-      - "Mentored junior developers and conducted code reviews"
-      - "Collaborated with product team to define technical requirements"
+      - client: "Sogei — SW Technology Innovation"
+        role: "Frontend Developer"
+        period: "Dec 2023 — Jun 2025"
+        highlights:
+          - "Developed and maintained a section of a public-facing government web portal"
+          - "Implemented accessible, responsive UI components in React JS"
+          - "Participated in code reviews and automated testing cycles"
+        tech: ["React JS", "JavaScript"]
+
+      - client: "INPS — Portale INPS"
+        role: "Frontend Developer"
+        period: "Sep 2023 — Nov 2023"
+        highlights:
+          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Integrated React components with existing backend services via REST APIs"
+        tech: ["React JS", ".NET", "Visual Studio"]
+
+      - client: "Guardia di Finanza — Anagrafe Unica del Contribuente"
+        role: "Frontend Developer"
+        period: "Oct 2022 — Sep 2023"
+        highlights:
+          - "Assisted in frontend development of the taxpayer registry system"
+          - "Defined test cases and contributed to project technical specifications"
+          - "Performed functional testing and collaudation"
+        tech: ["React JS", "SQL", "Visual Studio"]
+
+      - client: "FCA / Stellantis — Global Connectivity Platform"
+        role: "Technical Operations Developer"
+        period: "Sep 2021 — Feb 2024"
+        highlights:
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
+          - "Developed Python automation scripts to streamline operational workflows"
+          - "Supported business continuity and capacity management activities"
+        tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
+
+      - client: "INPS — SW Technology Innovation (Knowledge Management)"
+        role: "SharePoint Developer"
+        period: "Mar 2021 — Nov 2021"
+        highlights:
+          - "Designed and developed INPS's internal Knowledge Management platform on SharePoint Online and SharePoint 2019"
+          - "Programmed in PowerShell, C#, JavaScript and TypeScript for platform customisation"
+        tech: ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
+
+      - client: "INPS — SW Technology Innovation (Agorà Social Network)"
+        role: "SharePoint Developer"
+        period: "Oct 2020 — Mar 2021"
+        highlights:
+          - "Contributed to the development of 'Agorà', INPS's internal social network platform"
+          - "Built features using SharePoint Online/2019 with React JS and C# customisations and pure JavaScript for certain external plugins"
+          - "Handled development, testing and maintenance tasks across the full feature lifecycle"
+        tech: ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
 
 education:
-  - institution: "University Name"
-    degree: "Master of Science in Computer Science"
-    period: "2017 — 2019"
-    notes: "Graduated with honours. Thesis: \"Topic of your thesis\""
-
-  - institution: "University Name"
-    degree: "Bachelor of Science in Computer Engineering"
-    period: "2014 — 2017"
+  - institution: "ITIS G. Armellini — Rome"
+    degree: "Technical High School Diploma — Computer Science & Telecommunications"
+    period: "2016 — 2020"
     notes: ""
 
 skills:
   - category: "Languages"
-    items: ["Go", "Python", "TypeScript", "SQL"]
-  - category: "Frameworks"
-    items: ["Hugo", "Django", "React", "Node.js"]
-  - category: "Infrastructure"
-    items: ["Docker", "Kubernetes", "Terraform", "AWS"]
+    items: ["JavaScript", "TypeScript", "C#", "Python", "SQL", "Java"]
+  - category: "Frameworks & Platforms"
+    items: ["React JS", ".NET", "SharePoint Online", "SharePoint 2019"]
+  - category: "Tools & Infrastructure"
+    items: ["Visual Studio", "Linux", "Git", "ServiceNow / Drive IT", "Apache Tomcat"]
   - category: "Practices"
-    items: ["CI/CD", "TDD", "Agile/Scrum", "Code Review"]
+    items: ["TDD", "Agile / Scrum", "Code Review", "Ticket Management", "REST APIs"]
 
 languages:
   - name: "Italian"
     level: "Native"
   - name: "English"
-    level: "Fluent (C1)"
+    level: "Fluent (C2 — First Certificate in English)"
+  - name: "French"
+    level: "Basic (A2)"
 
 certifications:
-  - name: "AWS Solutions Architect – Associate"
-    issuer: "Amazon Web Services"
+  - name: "Linux Green Software for Practitioners (LFC131)"
+    issuer: "Linux Foundation"
     year: "2023"
+  - name: "Microsoft Azure AI Fundamentals (AI-900)"
+    issuer: "Microsoft"
+    year: "2020"
 
 interests:
+  - "Amateur writing & storytelling"
   - "Open-source contributions"
-  - "Technical writing"
-  - "Photography"
+  - "Technology & innovation"

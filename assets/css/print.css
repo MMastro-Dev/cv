@@ -20,7 +20,9 @@ body {
 
 /* Hide non-print elements */
 .skip-link,
-.footer {
+.footer,
+.card__download,
+.entry__tech {
   display: none;
 }
 
