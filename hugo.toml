@@ -1,0 +1,19 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'CV — Your Name'
+theme = 'cv-card'
+
+# Disable unused taxonomy pages
+disableKinds = ['taxonomy', 'term']
+
+# Build settings
+[build]
+  [build.buildStats]
+    enable = true
+
+[outputs]
+  home = ['html']
+
+[params]
+  description = 'Professional CV / Resume'
+  author = 'Your Name'

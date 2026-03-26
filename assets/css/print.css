@@ -1,0 +1,150 @@
+/* ============================================================
+   CV Card Theme — Print Stylesheet
+   Optimised for A4 PDF export. B&W safe.
+   ============================================================ */
+
+@page {
+  size: A4;
+  margin: 15mm 18mm;
+}
+
+body {
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide non-print elements */
+.skip-link,
+.footer {
+  display: none;
+}
+
+/* Ensure links are visible as text with URLs */
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 8pt;
+  color: #555;
+  word-break: break-all;
+}
+
+/* Inside contact list, don't repeat obvious URLs */
+.card__contact a[href^="mailto:"]::after,
+.card__contact a[href^="tel:"]::after {
+  content: "";
+}
+
+/* Card header */
+.card {
+  border-bottom: 1.5pt solid #000;
+  padding-bottom: 8pt;
+  margin-bottom: 12pt;
+}
+
+.card__name {
+  font-size: 18pt;
+}
+
+.card__title {
+  font-size: 11pt;
+  color: #333;
+}
+
+.card__contact {
+  gap: 4pt 14pt;
+  font-size: 8.5pt;
+  color: #333;
+  margin-top: 6pt;
+}
+
+.card__contact a::after {
+  content: "" !important;
+}
+
+/* Icons — keep small in print */
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
+/* Section titles */
+.section {
+  margin-bottom: 10pt;
+}
+
+.section__title {
+  font-size: 9pt;
+  border-bottom: 0.5pt solid #999;
+  padding-bottom: 2pt;
+  margin-bottom: 6pt;
+  color: #000;
+}
+
+/* Entries */
+.entry {
+  margin-bottom: 8pt;
+}
+
+.entry__role {
+  font-size: 10.5pt;
+}
+
+.entry__period {
+  font-size: 8.5pt;
+  color: #333;
+}
+
+.entry__org {
+  font-size: 8.5pt;
+  color: #333;
+}
+
+.entry__list {
+  font-size: 9pt;
+  color: #222;
+}
+
+.entry__list li {
+  margin-bottom: 1pt;
+}
+
+/* Skills tags */
+.skills__item,
+.tag {
+  background: #f0f0f0;
+  border-color: #999;
+  font-size: 8pt;
+  padding: 1px 5px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Flat lists */
+.flat-list {
+  font-size: 9pt;
+}
+
+/* Avoid page breaks inside sections */
+.section {
+  break-inside: avoid;
+}
+
+.entry {
+  break-inside: avoid;
+}
+
+/* Summary */
+.summary {
+  font-size: 9.5pt;
+  color: #222;
+}

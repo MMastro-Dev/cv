@@ -1,0 +1,52 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo
+        run: |
+          HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep '"tag_name"' | sed -E 's/.*"v([^"]+)".*/\1/')
+          curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" | tar xz -C /usr/local/bin hugo
+          hugo version
+
+      - name: Build site
+        run: hugo --gc --minify
+
+      - name: Install Chrome & generate PDF
+        run: |
+          apt-get update -qq && apt-get install -y -qq chromium-browser >/dev/null 2>&1 || true
+          CHROME=$(command -v chromium-browser || command -v chromium || command -v google-chrome || echo "")
+          if [ -n "$CHROME" ]; then
+            "$CHROME" --headless --disable-gpu --no-sandbox \
+              --print-to-pdf=public/cv.pdf \
+              --print-to-pdf-no-header \
+              public/index.html
+          else
+            echo "::warning::Chrome/Chromium not found — skipping PDF generation"
+          fi
+
+      # ── Deploy to your personal server via rsync over SSH ──
+      # Set these as Gitea repository secrets (Settings → Secrets):
+      #   DEPLOY_HOST     — server hostname or IP
+      #   DEPLOY_USER     — SSH username
+      #   DEPLOY_KEY      — private SSH key (ed25519 recommended)
+      #   DEPLOY_PATH     — remote directory (e.g. /var/www/cv)
+      - name: Deploy via rsync
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new" \
+            public/ \
+            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
+          rm -f ~/.ssh/deploy_key

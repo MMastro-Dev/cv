@@ -1,0 +1,67 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow only one concurrent deployment
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        run: hugo --gc --minify
+
+      - name: Generate PDF
+        uses: browser-actions/setup-chrome@v1
+      - run: |
+          chrome --headless --disable-gpu --no-sandbox \
+            --print-to-pdf=public/cv.pdf \
+            --print-to-pdf-no-header \
+            public/index.html
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-site
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv-site
+          path: public/
+
+      # ── Deploy to your personal server via rsync over SSH ──
+      # Set these repository secrets:
+      #   DEPLOY_HOST     — server hostname or IP
+      #   DEPLOY_USER     — SSH username
+      #   DEPLOY_KEY      — private SSH key (ed25519 recommended)
+      #   DEPLOY_PATH     — remote directory (e.g. /var/www/cv)
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avz --delete
+          path: public/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}

@@ -1,0 +1,74 @@
+# ============================================================
+# CV DATA — Edit this file to update your CV content.
+# The website will be rebuilt automatically from this data.
+# ============================================================
+
+personal:
+  name: "Your Name"
+  title: "Your Professional Title"
+  email: "your.email@example.com"
+  phone: "+39 000 000 0000"
+  location: "City, Country"
+  website: "https://yourwebsite.com"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  github: "https://github.com/yourusername"
+  summary: >
+    A brief professional summary (2-3 sentences) describing your key
+    strengths, experience level, and what you bring to a role. Keep it
+    concise and impactful.
+
+experience:
+  - company: "Company Name"
+    role: "Job Title"
+    period: "Jan 2023 — Present"
+    location: "City, Country"
+    highlights:
+      - "Led a team of 5 engineers to deliver a critical platform migration on schedule"
+      - "Reduced infrastructure costs by 30% through architecture optimisation"
+      - "Introduced CI/CD pipelines that cut deployment time from hours to minutes"
+
+  - company: "Previous Company"
+    role: "Previous Job Title"
+    period: "Mar 2020 — Dec 2022"
+    location: "City, Country"
+    highlights:
+      - "Designed and implemented RESTful APIs serving 10k+ requests/minute"
+      - "Mentored junior developers and conducted code reviews"
+      - "Collaborated with product team to define technical requirements"
+
+education:
+  - institution: "University Name"
+    degree: "Master of Science in Computer Science"
+    period: "2017 — 2019"
+    notes: "Graduated with honours. Thesis: \"Topic of your thesis\""
+
+  - institution: "University Name"
+    degree: "Bachelor of Science in Computer Engineering"
+    period: "2014 — 2017"
+    notes: ""
+
+skills:
+  - category: "Languages"
+    items: ["Go", "Python", "TypeScript", "SQL"]
+  - category: "Frameworks"
+    items: ["Hugo", "Django", "React", "Node.js"]
+  - category: "Infrastructure"
+    items: ["Docker", "Kubernetes", "Terraform", "AWS"]
+  - category: "Practices"
+    items: ["CI/CD", "TDD", "Agile/Scrum", "Code Review"]
+
+languages:
+  - name: "Italian"
+    level: "Native"
+  - name: "English"
+    level: "Fluent (C1)"
+
+certifications:
+  - name: "AWS Solutions Architect – Associate"
+    issuer: "Amazon Web Services"
+    year: "2023"
+
+interests:
+  - "Open-source contributions"
+  - "Technical writing"
+  - "Photography"
