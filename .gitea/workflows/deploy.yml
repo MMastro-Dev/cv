@@ -2,67 +2,49 @@
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+env:
+  IMAGE_NAME: git.mmastro.dev/maxim/cv
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Derive the full image reference once and reuse it across steps.
-      # Image: <registry>/<user>/cv   e.g. gitea.example.com/max/cv
-      - name: Set image ref
-        id: image
-        run: echo "ref=${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_USER }}/cv" >> $GITHUB_OUTPUT
-
-      - name: Log in to container registry
+      - name: Log in to Gitea container registry
         run: |
-          echo "${{ secrets.REGISTRY_TOKEN }}" | \
-            docker login "${{ secrets.REGISTRY_URL }}" \
-              --username "${{ secrets.REGISTRY_USER }}" --password-stdin
+          echo "${{ secrets.REGISTRY_PASSWORD }}" | \
+          docker login git.mmastro.dev \
+            -u ${{ secrets.REGISTRY_USER }} \
+            --password-stdin
 
-      - name: Build Docker image
+      - name: Build and push image
         run: |
           docker build \
-            --build-arg HUGO_VERSION=0.159.0 \
             --build-arg BASE_URL="${{ secrets.SITE_URL }}" \
-            --tag "${{ steps.image.outputs.ref }}:latest" \
-            --tag "${{ steps.image.outputs.ref }}:${{ github.sha }}" \
-            .
+            -t ${{ env.IMAGE_NAME }}:latest \
+            -t ${{ env.IMAGE_NAME }}:${{ gitea.sha }} .
+          docker push ${{ env.IMAGE_NAME }}:latest
+          docker push ${{ env.IMAGE_NAME }}:${{ gitea.sha }}
 
-      - name: Push image to registry
-        run: |
-          docker push "${{ steps.image.outputs.ref }}:latest"
-          docker push "${{ steps.image.outputs.ref }}:${{ github.sha }}"
-
-      # -- Deploy to your personal server via SSH ----------------------------
-      # The server must have Docker installed and be able to reach the registry.
-      # Required Gitea repository secrets (Settings -> Actions -> Secrets):
-      #   REGISTRY_URL    -- container registry hostname (e.g. gitea.example.com)
-      #   REGISTRY_USER   -- registry username
-      #   REGISTRY_TOKEN  -- registry password / API token (packages:read+write)
-      #   SITE_URL        -- public URL of the site (e.g. https://cv.example.com)
-      #   DEPLOY_HOST     -- server hostname or IP
-      #   DEPLOY_USER     -- SSH username
-      #   DEPLOY_KEY      -- private SSH key (ed25519 recommended)
-      - name: Deploy to server
+      - name: Deploy container
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh -o StrictHostKeyChecking=no gitea-runner@172.17.0.1 \
+            "docker pull ${{ env.IMAGE_NAME }}:latest"
+          ssh -o StrictHostKeyChecking=no gitea-runner@172.17.0.1 \
+            "docker stop cv"
+          ssh -o StrictHostKeyChecking=no gitea-runner@172.17.0.1 \
+            "docker rm cv"
+          ssh -o StrictHostKeyChecking=no gitea-runner@172.17.0.1 \
+            "docker run -d --name cv --network homenet --restart unless-stopped -p 127.0.0.1:8001:80 ${{ env.IMAGE_NAME }}:latest"
 
-          IMAGE="${{ steps.image.outputs.ref }}:latest"
-          REGISTRY="${{ secrets.REGISTRY_URL }}"
-          REG_USER="${{ secrets.REGISTRY_USER }}"
-          REG_TOKEN="${{ secrets.REGISTRY_TOKEN }}"
-
-          ssh -i ~/.ssh/deploy_key "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
-            "printf '%s' '${REG_TOKEN}' | docker login --username '${REG_USER}' --password-stdin '${REGISTRY}' \
-             && docker pull '${IMAGE}' \
-             && docker stop cv 2>/dev/null; docker rm cv 2>/dev/null \
-             && docker run -d --name cv --restart unless-stopped -p 80:80 '${IMAGE}'"
-
-          rm -f ~/.ssh/deploy_key
+      - name: Cleanup old images
+        run: docker image prune -f
