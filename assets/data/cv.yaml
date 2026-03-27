@@ -9,7 +9,7 @@ personal:
   email: "maximilian.mastrogiacomo@gmail.com"
   phone: "+39 3455852920"
   location: "Rome, Italy"
-  website: "https://mmastro.dev"
+  #website: "https://mmastro.dev"
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
 #  github: "https://github.com/yourusername"
   summary: >
@@ -92,7 +92,7 @@ education:
   - institution: "ITIS G. Armellini — Rome"
     degree: "Technical High School Diploma — Computer Science & Telecommunications"
     period: "2016 — 2020"
-    notes: ""
+    notes: "Final Grade 100/100"
 
 skills:
   - category: "Languages"
