@@ -11,14 +11,21 @@ personal:
   location: "Rome, Italy"
   #website: "https://mmastro.dev"
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
-#  github: "https://github.com/yourusername"
+  #  github: "https://github.com/yourusername"
   summary: >
     Frontend software developer with 5+ years of experience building accessible,
     responsive web applications in React, TypeScript and C# for large-scale
-    public-sector and enterprise platforms. Proven track record delivering
+    public-sector and enterprise platforms. Track record delivering
     production-grade UI in agile teams across regulated environments (public
     administration, finance, automotive). Strong grasp of REST API integration,
-    test-driven development and code review practices.
+    test-driven development and code review practices. Passionate about clean,
+    maintainable code and KISS principles. Comfortable working in any environment or platform, 
+    with a particular affinity for Linux-based toolchains and open-source technologies.
+    I am used to fitting in and contributing effectively in any team, no matter region,
+    language or culture both from a technical and interpersonal perspective.
+    I can quickly adapt to new environments and technologies, I am a fast learner 
+    and I am always eager to grow as a developer and take on new challenges. 
+    I am looking for new opportunities to grow as a developer and contribute to impactful projects in a collaborative, inclusive environment.
 
 experience:
   # Multi-project entry: use 'projects' to list distinct clients/engagements
@@ -31,25 +38,36 @@ experience:
         role: "Frontend Developer"
         period: "Jun 2025 — Present"
         highlights:
-          - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
-          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements"
-          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
-        tech: ["React JS", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "Copilot / AI-assisted development"]
+          - "Developed and maintained frontend components for the National Institute for Social Security (INPS) used by millions of Italian citizens to access social welfare benefits"
+          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements to meet accessibility standards for public-sector platforms"
+          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process to ensure high quality and reliability in a critical government service"
+        tech:
+          [
+            "React JS",
+            "TypeScript",
+            "JavaScript",
+            "HTML/CSS",
+            "SCSS",
+            "Redux",
+            "Cypress",
+            "Copilot / AI-assisted development",
+          ]
 
       - client: "Sogei — SW Technology Innovation"
         role: "Frontend Developer"
         period: "Dec 2023 — Jun 2025"
         highlights:
-          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
-          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Developed and maintained a section of a public-facing government web portal (Agenzia delle Entrate) serving millions of citizens with tax-related services and information"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes to ensure a consistent user experience for all users"
           - "Drove code quality through systematic code reviews and automated testing cycles"
-        tech: ["React JS", "JavaScript"]
+        tech:
+          ["React JS", "JavaScript", "TypeScript", "HTML/CSS", "SCSS", "Redux"]
 
       - client: "INPS — Portale INPS"
         role: "Frontend Developer"
         period: "Sep 2023 — Nov 2023"
         highlights:
-          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Developed frontend components for the National Institute for Social Security (INPS) citizen portal on a .NET infrastructure"
           - "Integrated React components with existing backend services via REST APIs"
         tech: ["React JS", ".NET", "Visual Studio"]
 
@@ -57,18 +75,19 @@ experience:
         role: "Frontend Developer"
         period: "Oct 2022 — Sep 2023"
         highlights:
-          - "Assisted in frontend development of the taxpayer registry system"
-          - "Defined test cases and contributed to project technical specifications"
-          - "Performed functional testing and collaudation"
+          - "Assisted in frontend development of the internal taxpayer registry system for the 'Guardia di Finanza', Italy's financial police force"
+          - "Defined test cases and contributed to project technical specifications to ensure alignment with functional requirements and regulatory standards"
+          - "Performed functional testing and collaudation to validate features and ensure system reliability in a critical government application"
         tech: ["React JS", "SQL", "Visual Studio"]
 
       - client: "FCA / Stellantis — Global Connectivity Platform"
         role: "Technical Operations Developer"
         period: "Sep 2021 — Feb 2024"
         highlights:
-          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
-          - "Developed Python automation scripts to streamline operational workflows"
-          - "Supported business continuity and capacity management activities"
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow) for FCA / Stellantis's Global Connectivity Platform, which provides connected services for some of the most important vehicle brands worldwide"
+          - "Developed Python automation scripts to streamline operational workflows and for mass migration of the entire API Gateway configurations to a newer version of then platform while maintaining business continuity and minimizing downtime"
+          - "Supported business continuity and capacity management activities to ensure high availability and performance of the platform in a fast-paced, global production environment"
+          - "Daily interactions with clients and technical teams across multiple countries and languages in Europe and North America"
         tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
 
       - client: "INPS — SW Technology Innovation (Knowledge Management)"
@@ -77,7 +96,8 @@ experience:
         highlights:
           - "Designed and developed INPS's internal Knowledge Management platform on SharePoint Online and SharePoint 2019"
           - "Programmed in PowerShell, C#, JavaScript and TypeScript for platform customisation"
-        tech: ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
+        tech:
+          ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
 
       - client: "INPS — SW Technology Innovation (Agorà Social Network)"
         role: "SharePoint Developer"
@@ -86,7 +106,8 @@ experience:
           - "Contributed to the development of 'Agorà', INPS's internal social network platform"
           - "Built features using SharePoint Online/2019 with React JS and C# customisations and pure JavaScript for certain external plugins"
           - "Handled development, testing and maintenance tasks across the full feature lifecycle"
-        tech: ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
+        tech:
+          ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
 
 education:
   - institution: "ITIS G. Armellini — Rome"
@@ -98,17 +119,36 @@ skills:
   - category: "Languages"
     items: ["JavaScript", "TypeScript", "C#", "Python", "SQL", "Java"]
   - category: "Frameworks & Platforms"
-    items: ["React JS", "Node.js", ".NET", "SharePoint Online", "SharePoint 2019", "Hugo", "SCSS"]
+    items:
+      [
+        "React JS",
+        "Node.js",
+        ".NET",
+        "SharePoint Online",
+        "SharePoint 2019",
+        "Hugo",
+        "SCSS",
+      ]
   - category: "Tools & Infrastructure"
-    items: ["Visual Studio", "Linux", "Git", "ServiceNow / Drive IT", "Apache Tomcat", "Docker", "CI/CD pipelines"]
+    items:
+      [
+        "Visual Studio",
+        "Linux",
+        "Git",
+        "ServiceNow / Drive IT",
+        "Apache Tomcat",
+        "Docker",
+        "CI/CD pipelines",
+      ]
   - category: "Practices"
-    items: ["TDD", "Agile / Scrum", "Code Review", "Ticket Management", "REST APIs"]
+    items:
+      ["TDD", "Agile / Scrum", "Code Review", "Ticket Management", "REST APIs"]
 
 languages:
   - name: "Italian"
     level: "Native"
   - name: "English"
-    level: "Fluent (C2 — First Certificate in English)"
+    level: "Fluent (C1 — First Certificate in English)"
   - name: "French"
     level: "Basic (A2)"
 
@@ -119,8 +159,20 @@ certifications:
   - name: "Microsoft Azure AI Fundamentals (AI-900)"
     issuer: "Microsoft"
     year: "2020"
+  - name: "CCNA1: Introduction to Networks"
+    issuer: "Cisco Networking Academy"
+    year: "2019"
+  - name: "30h Course on Applied Robotics"
+    issuer: "Istituto Tecnico Industriale A. Pacinotti"
+    year: "2015"
 
 interests:
   - "Amateur writing & storytelling"
-  - "Open-source contributions"
-  - "Technology & innovation"
+  - "Travel and cultural exploration"
+  - "Photography"
+  - "Open-source projects"
+  - "Homelabbing"
+  - "Robotics"
+  - "DIY Projects"
+  - "Sailing"
+  - "Camping and hiking"
