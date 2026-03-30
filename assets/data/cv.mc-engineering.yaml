@@ -109,7 +109,7 @@ languages:
   - name: "Italian"
     level: "Native"
   - name: "English"
-    level: "Native (C2 — First Certificate in English)"
+    level: "Fluent (C1 — First Certificate in English)"
   - name: "French"
     level: "Basic (A2)"
 
@@ -120,6 +120,9 @@ certifications:
   - name: "Microsoft Azure AI Fundamentals (AI-900)"
     issuer: "Microsoft"
     year: "2020"
+  - name: "CCNA1: Introduction to Networks"
+    issuer: "Cisco Networking Academy"
+    year: "2019"
 
 interests:
   - "Amateur writing & storytelling"
