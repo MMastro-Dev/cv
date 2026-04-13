@@ -9,23 +9,18 @@ personal:
   email: "maximilian.mastrogiacomo@gmail.com"
   phone: "+39 3455852920"
   location: "Rome, Italy"
-  #website: "https://mmastro.dev"
+  website: "https://mmastro.dev"
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
-  #  github: "https://github.com/yourusername"
+  github: "https://github.com/MMastro-Dev"
   summary: >
     Frontend software developer with 5+ years of experience building accessible,
     responsive web applications in React, TypeScript and C# for large-scale
     public-sector and enterprise platforms. Track record delivering
     production-grade UI in agile teams across regulated environments (public
     administration, finance, automotive). Strong grasp of REST API integration,
-    test-driven development and code review practices. Passionate about clean,
-    maintainable code and KISS principles. Comfortable working in any environment or platform, 
-    with a particular affinity for Linux-based toolchains and open-source technologies.
-    I am used to fitting in and contributing effectively in any team, no matter region,
-    language or culture both from a technical and interpersonal perspective.
-    I can quickly adapt to new environments and technologies, I am a fast learner 
-    and I am always eager to grow as a developer and take on new challenges. 
-    I am looking for new opportunities to grow as a developer and contribute to impactful projects in a collaborative, inclusive environment.
+    test-driven development and code review practices. Comfortable across
+    Linux-based toolchains and open-source technologies; quick to adapt to new
+    stacks, teams and cultures.
 
 experience:
   # Multi-project entry: use 'projects' to list distinct clients/engagements
