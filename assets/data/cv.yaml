@@ -15,12 +15,11 @@ personal:
   summary: >
     Frontend software developer with 5+ years of experience building accessible,
     responsive web applications in React, TypeScript and C# for large-scale
-    public-sector and enterprise platforms. Track record delivering
-    production-grade UI in agile teams across regulated environments (public
-    administration, finance, automotive). Strong grasp of REST API integration,
-    test-driven development and code review practices. Comfortable across
-    Linux-based toolchains and open-source technologies; quick to adapt to new
-    stacks, teams and cultures.
+    public-sector and enterprise platforms. Delivered production-grade UI in
+    agile teams across regulated environments (public administration, finance,
+    automotive). Experienced with REST API integration, test-driven development
+    and code review practices. Familiar with Linux-based toolchains and
+    open-source technologies; adapts readily to new stacks, teams and cultures.
 
 experience:
   # Multi-project entry: use 'projects' to list distinct clients/engagements
@@ -34,8 +33,8 @@ experience:
         period: "Jun 2025 — Present"
         highlights:
           - "Developed and maintained frontend components for the National Institute for Social Security (INPS) used by millions of Italian citizens to access social welfare benefits"
-          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements to meet accessibility standards for public-sector platforms"
-          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process to ensure high quality and reliability in a critical government service"
+          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and colour contrast"
+          - "Led unit, integration and end-to-end test cycles to maintain quality and reliability across a critical government service"
         tech:
           [
             "React JS",
@@ -53,8 +52,8 @@ experience:
         period: "Dec 2023 — Jun 2025"
         highlights:
           - "Developed and maintained a section of a public-facing government web portal (Agenzia delle Entrate) serving millions of citizens with tax-related services and information"
-          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes to ensure a consistent user experience for all users"
-          - "Drove code quality through systematic code reviews and automated testing cycles"
+          - "Delivered WCAG-compliant UI components in React JS, tested across multiple browsers and screen sizes for a consistent user experience"
+          - "Maintained code quality through code reviews and automated testing"
         tech:
           ["React JS", "JavaScript", "TypeScript", "HTML/CSS", "SCSS", "Redux"]
 
@@ -71,8 +70,8 @@ experience:
         period: "Oct 2022 — Sep 2023"
         highlights:
           - "Assisted in frontend development of the internal taxpayer registry system for the 'Guardia di Finanza', Italy's financial police force"
-          - "Defined test cases and contributed to project technical specifications to ensure alignment with functional requirements and regulatory standards"
-          - "Performed functional testing and collaudation to validate features and ensure system reliability in a critical government application"
+          - "Defined test cases and contributed to project technical specifications in line with functional and regulatory requirements"
+          - "Ran functional testing and acceptance validation to verify feature correctness and system reliability"
         tech: ["React JS", "SQL", "Visual Studio"]
 
       - client: "FCA / Stellantis — Global Connectivity Platform"
@@ -80,9 +79,9 @@ experience:
         period: "Sep 2021 — Feb 2024"
         highlights:
           - "Managed API Gateway technical tickets via Drive IT (ServiceNow) for FCA / Stellantis's Global Connectivity Platform, which provides connected services for some of the most important vehicle brands worldwide"
-          - "Developed Python automation scripts to streamline operational workflows and for mass migration of the entire API Gateway configurations to a newer version of then platform while maintaining business continuity and minimizing downtime"
-          - "Supported business continuity and capacity management activities to ensure high availability and performance of the platform in a fast-paced, global production environment"
-          - "Daily interactions with clients and technical teams across multiple countries and languages in Europe and North America"
+          - "Wrote Python scripts to automate routine operational tasks and migrate the full API Gateway configuration to a new platform version with no service interruption"
+          - "Handled capacity management and availability monitoring for a global production platform serving connected vehicle services"
+          - "Worked directly with clients and technical teams across Europe and North America in multiple languages"
         tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
 
       - client: "INPS — SW Technology Innovation (Knowledge Management)"

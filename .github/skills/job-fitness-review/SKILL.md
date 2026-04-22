@@ -147,7 +147,20 @@ Categories: Hard skills · Soft skills / behaviours · Domain terms · Action ve
 
 - **Re-score** after suggested changes
 - **ATS readability** issues in the current CV format
-- **AI-writing red flags** (delve, realm, intricate, showcasing, pivotal, spearheaded) with human alternatives
+- **AI-writing red flags** — a CV should not read like LLM output. Flag suggestions that show these tells and propose human alternatives. One or two of these in isolation is fine; the tell is density. Curated checklist (from *Wikipedia:Signs of AI writing* and *Hunting the Muse — How to tell if writing is AI*):
+  - **High-density vocabulary**: delve, intricate/intricacies, pivotal, tapestry, landscape (figurative), showcase/showcasing, underscore (as verb), testament, realm, garner, bolster, meticulous/meticulously, foster/fostering, enhance, emphasising, align with, highlight (as verb), enduring, vibrant, crucial, nestled, seamlessly, leverage (as verb), unlock, empower, elevate. Swap for plainer equivalents ("delve into" → "explore"; "leverage" → "use"; "showcase" → "show/demonstrate"; "pivotal" → "key" or drop; "underscore" → "show/confirm").
+  - **Puffery and commitment language**: "commitment to", "dedication to", "passion for", "deep understanding", "proven track record" (overused — prefer concrete evidence).
+  - **Formulaic structures**:
+    - Negative parallelism — "not just X, but Y", "not X, it's Y", "no X, no Y, just Z"
+    - Rule of three — three-adjective or three-phrase piles ("accessible, responsive and performant UI"); keep only if all three earn their place
+    - "…not an afterthought" / "from X to Y" / "…and beyond" flourishes
+  - **Copula avoidance**: "serves as / stands as / marks / represents" or "boasts / features / offers" where plain "is / has" works better. Prefer simple forms in a CV.
+  - **Cliché openers**: "In today's fast-paced…", "In the evolving landscape of…", "As the world continues to evolve…".
+  - **Em dashes** used for punched-up emphasis. Keep them when they are genuinely the best punctuation, but replace lazy dashes with commas, parentheses or a full stop.
+  - **Curly quotes and apostrophes** (" ' ' ") — CVs should use straight quotes for consistency with plain-text ATS parsing.
+  - **Hedged forward-looking filler** — "ongoing initiatives", "despite challenges", "positioned to…".
+
+  Be proportionate. The goal is a natural, specific, concrete CV — not a sterilised one. Keep words on this list when they are accurate and unavoidable; cull them when they are dressing up a claim that could be stated more directly.
 - **Honest check**: confirm all suggestions remain truthful
 
 End with a prioritised **Action List** of the top 5 changes to make in `cv.yaml` for this application.

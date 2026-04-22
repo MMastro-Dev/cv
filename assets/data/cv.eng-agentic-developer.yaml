@@ -35,8 +35,8 @@ experience:
         period: "Jun 2025 — Present"
         highlights:
           - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
-          - "Integrated GitHub Copilot into the daily development workflow — prompting, reviewing and iterating on generated code to maintain production-grade quality standards"
-          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
+          - "Integrated GitHub Copilot into the daily development workflow; prompting, reviewing and iterating on generated code to maintain production-grade quality standards"
+          - "Led extensive test cycles; unit, integration and end-to-end; as a core part of the delivery process to ensure high quality and reliability in a critical government service"
         tech: ["React JS", "TypeScript", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "GitHub Copilot", "AI-assisted development"]
 
       - client: "Sogei — SW Technology Innovation"
