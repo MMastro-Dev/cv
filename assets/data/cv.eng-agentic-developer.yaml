@@ -20,9 +20,9 @@ personal:
     web applications in React, TypeScript and C# for large-scale public-sector and
     enterprise platforms. Experienced in AI-assisted development workflows integrating
     tools like GitHub Copilot to accelerate delivery while maintaining strict code review
-    and quality standards. Comfortable with CLI-driven automation, REST API integration,
-    and decomposing complex systems into well-structured, maintainable components.
-    Operates effectively in regulated, high-stakes environments (public administration,
+    and quality standards. Familiar with CLI-driven automation, REST API integration,
+    and breaking complex systems into clean, maintainable components.
+    Has worked across regulated, high-stakes environments (public administration,
     finance, automotive).
 
 experience:
@@ -35,8 +35,8 @@ experience:
         period: "Jun 2025 — Present"
         highlights:
           - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
-          - "Integrated GitHub Copilot into the daily development workflow; prompting, reviewing and iterating on generated code to maintain production-grade quality standards"
-          - "Led extensive test cycles; unit, integration and end-to-end; as a core part of the delivery process to ensure high quality and reliability in a critical government service"
+          - "Integrated GitHub Copilot into the daily development workflow; reviewing and refining generated code to maintain production quality"
+          - "Led unit, integration and end-to-end test cycles to maintain quality and reliability across a critical government service"
         tech: ["React JS", "TypeScript", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "GitHub Copilot", "AI-assisted development"]
 
       - client: "Sogei — SW Technology Innovation"
@@ -44,8 +44,8 @@ experience:
         period: "Dec 2023 — Jun 2025"
         highlights:
           - "Developed and maintained a section of a public-facing government web portal (Agenzia delle Entrate) serving millions of citizens with tax-related services and information"
-          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes to ensure a consistent user experience for all users"
-          - "Drove code quality through systematic code reviews and automated testing cycles"
+          - "Delivered WCAG-compliant UI components in React JS, tested across multiple browsers and screen sizes for a consistent user experience"
+          - "Maintained code quality through code reviews and automated testing"
         tech: ["React JS", "JavaScript", "TypeScript", "HTML/CSS", "SCSS", "Redux"]
 
       - client: "INPS — Portale INPS"
@@ -60,19 +60,19 @@ experience:
         role: "Frontend Developer"
         period: "Oct 2022 — Sep 2023"
         highlights:
-          - "Contributed to frontend development of the taxpayer registry system, taking ownership of test case definition and functional validation cycles"
-          - "Defined test cases and contributed to project technical specifications to ensure alignment with functional requirements and regulatory standards"
-          - "Performed functional testing and QA validation to ensure system reliability in a critical government application"
+          - "Contributed to frontend development of the internal taxpayer registry system for the Guardia di Finanza, Italy's financial police force"
+          - "Defined test cases and contributed to project technical specifications in line with functional and regulatory requirements"
+          - "Ran functional testing and QA validation to verify system behaviour in a critical government application"
         tech: ["React JS", "SQL", "Visual Studio"]
 
       - client: "FCA / Stellantis — Global Connectivity Platform"
         role: "Technical Operations Developer"
         period: "Sep 2021 — Feb 2024"
         highlights:
-          - "Built Python CLI automation scripts to eliminate manual operational steps, reducing ticket-resolution time through scripted, repeatable workflows"
+          - "Wrote Python CLI scripts to automate routine operational steps and reduce ticket-resolution time"
           - "Managed API Gateway technical tickets via Drive IT (ServiceNow) for FCA / Stellantis's Global Connectivity Platform, which provides connected services for some of the most important vehicle brands worldwide"
-          - "Supported business continuity and capacity management activities to ensure high availability and performance of the platform in a fast-paced, global production environment"
-          - "Daily interactions with clients and technical teams across multiple countries and languages in Europe and North America"
+          - "Handled capacity management and availability monitoring for a global production platform serving connected vehicle services"
+          - "Worked directly with clients and technical teams across Europe and North America in multiple languages"
         tech: ["Python", "Linux", "Bash / CLI scripting", "ServiceNow / Drive IT", "Change Management"]
 
       - client: "INPS — SW Technology Innovation (Knowledge Management)"
