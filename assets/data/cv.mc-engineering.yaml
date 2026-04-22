@@ -10,9 +10,9 @@ personal:
   email: "maximilian.mastrogiacomo@gmail.com"
   phone: "+39 3455852920"
   location: "Rome, Italy"
-  #website: "https://mmastro.dev"
+  website: "https://mmastro.dev"
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
-#  github: "https://github.com/yourusername"
+  github: "https://github.com/MMastro-Dev"
   summary: >
     Frontend developer with 5+ years of experience delivering production-grade
     React and TypeScript applications for large-scale enterprise and
@@ -31,25 +31,25 @@ experience:
         role: "Frontend Developer"
         period: "Jun 2025 — Present"
         highlights:
-          - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
-          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements"
-          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
+          - "Developed and maintained frontend components for the National Institute for Social Security (INPS) used by millions of Italian citizens to access social welfare benefits"
+          - "Ensured WCAG compliance throughout the component library, covering keyboard navigation, screen reader support and contrast requirements to meet accessibility standards for public-sector platforms"
+          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process to ensure high quality and reliability in a critical government service"
         tech: ["React JS", "TypeScript", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "Copilot / AI-assisted development"]
 
       - client: "Sogei — SW Technology Innovation"
         role: "Frontend Developer"
         period: "Dec 2023 — Jun 2025"
         highlights:
-          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
-          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Developed and maintained a section of a public-facing government web portal (Agenzia delle Entrate) serving millions of citizens with tax-related services and information"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes to ensure a consistent user experience for all users"
           - "Drove code quality through systematic code reviews and automated testing cycles"
-        tech: ["React JS", "TypeScript", "JavaScript"]
+        tech: ["React JS", "TypeScript", "JavaScript", "HTML/CSS", "SCSS", "Redux"]
 
       - client: "INPS — Portale INPS"
         role: "Frontend Developer"
         period: "Sep 2023 — Nov 2023"
         highlights:
-          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Developed frontend components for the National Institute for Social Security (INPS) citizen portal on a .NET infrastructure"
           - "Integrated React components with existing backend services via REST APIs"
         tech: ["React JS", ".NET", "Visual Studio"]
 
@@ -57,18 +57,18 @@ experience:
         role: "Frontend Developer"
         period: "Oct 2022 — Sep 2023"
         highlights:
-          - "Assisted in frontend development of the taxpayer registry system"
-          - "Defined test cases and contributed to project technical specifications"
-          - "Performed functional testing and collaudation"
+          - "Assisted in frontend development of the internal taxpayer registry system for the 'Guardia di Finanza', Italy's financial police force"
+          - "Defined test cases and contributed to project technical specifications to ensure alignment with functional requirements and regulatory standards"
+          - "Performed functional testing and collaudation to validate features and ensure system reliability in a critical government application"
         tech: ["React JS", "SQL", "Visual Studio"]
 
       - client: "FCA / Stellantis — Global Connectivity Platform"
         role: "Technical Operations Developer"
         period: "Sep 2021 — Feb 2024"
         highlights:
-          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
-          - "Developed Python automation scripts to streamline operational workflows"
-          - "Supported business continuity and capacity management activities"
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow) for FCA / Stellantis's Global Connectivity Platform, which provides connected services for some of the most important vehicle brands worldwide"
+          - "Developed Python automation scripts to streamline operational workflows and for mass migration of the entire API Gateway configurations to a newer version of then platform while maintaining business continuity and minimizing downtime"
+          - "Supported business continuity and capacity management activities to ensure high availability and performance of the platform in a fast-paced, global production environment"
           - "Daily interactions with clients and technical teams across multiple countries and languages in Europe and North America"
         tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
 
@@ -129,8 +129,13 @@ certifications:
   - name: "CCNA1: Introduction to Networks"
     issuer: "Cisco Networking Academy"
     year: "2019"
+  - name: "30h Course on Applied Robotics"
+    issuer: "Istituto Tecnico Industriale A. Pacinotti"
+    year: "2015"
 
 interests:
   - "Amateur writing & storytelling"
-  - "Open-source contributions"
-  - "Technology & innovation"
+  - "Travel and cultural exploration"
+  - "Photography"
+  - "Open-source projects"
+  - "Homelabbing"

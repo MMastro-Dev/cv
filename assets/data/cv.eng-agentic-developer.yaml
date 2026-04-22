@@ -14,11 +14,11 @@ personal:
   location: "Rome, Italy"
   website: "https://mmastro.dev"
   linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
-#  github: "https://github.com/yourusername"
+  github: "https://github.com/MMastro-Dev"
   summary: >
     Frontend software developer with 5+ years of experience building production-grade
     web applications in React, TypeScript and C# for large-scale public-sector and
-    enterprise platforms. Experienced in AI-assisted development workflows — integrating
+    enterprise platforms. Experienced in AI-assisted development workflows integrating
     tools like GitHub Copilot to accelerate delivery while maintaining strict code review
     and quality standards. Comfortable with CLI-driven automation, REST API integration,
     and decomposing complex systems into well-structured, maintainable components.
@@ -37,22 +37,22 @@ experience:
           - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
           - "Integrated GitHub Copilot into the daily development workflow — prompting, reviewing and iterating on generated code to maintain production-grade quality standards"
           - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
-        tech: ["React JS", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "GitHub Copilot", "AI-assisted development"]
+        tech: ["React JS", "TypeScript", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "GitHub Copilot", "AI-assisted development"]
 
       - client: "Sogei — SW Technology Innovation"
         role: "Frontend Developer"
         period: "Dec 2023 — Jun 2025"
         highlights:
-          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
-          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Developed and maintained a section of a public-facing government web portal (Agenzia delle Entrate) serving millions of citizens with tax-related services and information"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes to ensure a consistent user experience for all users"
           - "Drove code quality through systematic code reviews and automated testing cycles"
-        tech: ["React JS", "JavaScript"]
+        tech: ["React JS", "JavaScript", "TypeScript", "HTML/CSS", "SCSS", "Redux"]
 
       - client: "INPS — Portale INPS"
         role: "Frontend Developer"
         period: "Sep 2023 — Nov 2023"
         highlights:
-          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Developed frontend components for the National Institute for Social Security (INPS) citizen portal on a .NET infrastructure"
           - "Integrated React components with existing backend services via REST APIs"
         tech: ["React JS", ".NET", "Visual Studio"]
 
@@ -61,8 +61,8 @@ experience:
         period: "Oct 2022 — Sep 2023"
         highlights:
           - "Contributed to frontend development of the taxpayer registry system, taking ownership of test case definition and functional validation cycles"
-          - "Defined test cases and contributed to project technical specifications"
-          - "Performed functional testing and QA validation"
+          - "Defined test cases and contributed to project technical specifications to ensure alignment with functional requirements and regulatory standards"
+          - "Performed functional testing and QA validation to ensure system reliability in a critical government application"
         tech: ["React JS", "SQL", "Visual Studio"]
 
       - client: "FCA / Stellantis — Global Connectivity Platform"
@@ -70,8 +70,9 @@ experience:
         period: "Sep 2021 — Feb 2024"
         highlights:
           - "Built Python CLI automation scripts to eliminate manual operational steps, reducing ticket-resolution time through scripted, repeatable workflows"
-          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
-          - "Supported business continuity and capacity management activities"
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow) for FCA / Stellantis's Global Connectivity Platform, which provides connected services for some of the most important vehicle brands worldwide"
+          - "Supported business continuity and capacity management activities to ensure high availability and performance of the platform in a fast-paced, global production environment"
+          - "Daily interactions with clients and technical teams across multiple countries and languages in Europe and North America"
         tech: ["Python", "Linux", "Bash / CLI scripting", "ServiceNow / Drive IT", "Change Management"]
 
       - client: "INPS — SW Technology Innovation (Knowledge Management)"
@@ -95,7 +96,7 @@ education:
   - institution: "ITIS G. Armellini — Rome"
     degree: "Technical High School Diploma — Computer Science & Telecommunications"
     period: "2016 — 2020"
-    notes: ""
+    notes: "Final Grade 100/100"
 
 skills:
   - category: "Practices"
@@ -111,7 +112,7 @@ languages:
   - name: "Italian"
     level: "Native"
   - name: "English"
-    level: "Fluent (C2 — First Certificate in English)"
+    level: "Fluent (C1 — First Certificate in English)"
   - name: "French"
     level: "Basic (A2)"
 
@@ -128,8 +129,16 @@ certifications:
   - name: "Microsoft Azure AI Fundamentals (AI-900)"
     issuer: "Microsoft"
     year: "2020"
+  - name: "CCNA1: Introduction to Networks"
+    issuer: "Cisco Networking Academy"
+    year: "2019"
+  - name: "30h Course on Applied Robotics"
+    issuer: "Istituto Tecnico Industriale A. Pacinotti"
+    year: "2015"
 
 interests:
   - "Amateur writing & storytelling"
-  - "Open-source contributions"
-  - "Technology & innovation"
+  - "Travel and cultural exploration"
+  - "Photography"
+  - "Open-source projects"
+  - "Homelabbing"
