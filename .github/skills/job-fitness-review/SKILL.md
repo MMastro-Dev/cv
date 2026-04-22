@@ -80,9 +80,9 @@ Fetch each URL or parse each pasted block. Extract for each role:
 
 Produce a single ranked comparison table:
 
-| # | Role | Company | Score /10 | Key strengths | Key gaps | Verdict |
-|---|------|---------|-----------|---------------|----------|---------|
-| 1 | … | … | … | … | … | Strong / Borderline / Skip |
+| # | Role | Company | Score /10 | Comp range (€/yr gross) | Key strengths | Key gaps | Verdict |
+|---|------|---------|-----------|------------------------|---------------|----------|---------|
+| 1 | … | … | … | … | … | … | Strong / Borderline / Skip |
 
 Sort by score descending. Mark the top pick with ⭐.
 
@@ -165,7 +165,22 @@ Categories: Hard skills · Soft skills / behaviours · Domain terms · Action ve
 
 End with a prioritised **Action List** of the top 5 changes to make in `cv.yaml` for this application.
 
-### Step 5 — Offer tailored CV variant
+### Step 5 — Compensation estimate
+
+Provide a ballpark **gross yearly compensation** range for this role given:
+- The candidate's profile (5+ years experience, public-sector enterprise, Rome/Italy base)
+- The specific role, seniority level and company type inferred from the job description
+- Local market norms (Italian market unless the role is explicitly remote/international)
+
+Present as a simple table:
+
+| | Low | Mid | High |
+|---|-----|-----|------|
+| **Gross/year (€)** | … | … | … |
+
+Add a one-paragraph note on what levers could push the candidate toward the higher end (e.g. negotiating strategy, certifications, seniority framing) and any factors that might cap it (e.g. public-sector pay scales, company size).
+
+### Step 6 — Offer tailored CV variant
 
 After delivering the action list, ask:
 
