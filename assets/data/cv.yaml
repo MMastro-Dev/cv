@@ -113,6 +113,12 @@ languages:
     level: "Basic (A2)"
 
 certifications:
+  - name: "Advanced React: Design System, Design Patterns, Performance"
+    issuer: "Udemy"
+    year: "2026"
+  - name: "React Testing Library and Jest: The Complete Guide"
+    issuer: "Udemy"
+    year: "2026"
   - name: "Linux Green Software for Practitioners (LFC131)"
     issuer: "Linux Foundation"
     year: "2023"

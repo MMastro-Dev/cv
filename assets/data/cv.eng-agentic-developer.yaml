@@ -1,0 +1,135 @@
+# ============================================================
+# CV DATA — ENG Agentic Developer variant
+# Tailored to: ENG (Eng Digital / Eng Modernize) — Agentic Developer (JR105068)
+# Base: cv.yaml — changes: title, summary, INPS Omnia AI bullet, FCA CLI bullet,
+#   GdF passivity fix, skills reordered + Prompt Engineering + Bash/CLI added,
+#   GitHub Copilot added to Tools, collaudation replaced
+# ============================================================
+
+personal:
+  name: "Maximilian Mastrogiacomo"
+  title: "Agentic Developer"
+  email: "maximilian.mastrogiacomo@gmail.com"
+  phone: "+39 3455852920"
+  location: "Rome, Italy"
+  website: "https://mmastro.dev"
+  linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
+#  github: "https://github.com/yourusername"
+  summary: >
+    Frontend software developer with 5+ years of experience building production-grade
+    web applications in React, TypeScript and C# for large-scale public-sector and
+    enterprise platforms. Experienced in AI-assisted development workflows — integrating
+    tools like GitHub Copilot to accelerate delivery while maintaining strict code review
+    and quality standards. Comfortable with CLI-driven automation, REST API integration,
+    and decomposing complex systems into well-structured, maintainable components.
+    Operates effectively in regulated, high-stakes environments (public administration,
+    finance, automotive).
+
+experience:
+  - company: "AlmavivA S.p.A."
+    period: "Oct 2020 — Present"
+    location: "Rome, Italy"
+    projects:
+      - client: "INPS — Ammortizzatori Sociali (Omnia)"
+        role: "Frontend Developer"
+        period: "Jun 2025 — Present"
+        highlights:
+          - "Built and shipped reusable, accessible UI components in React JS for a social welfare benefits platform used by millions of Italian citizens"
+          - "Integrated GitHub Copilot into the daily development workflow — prompting, reviewing and iterating on generated code to maintain production-grade quality standards"
+          - "Led extensive test cycles — unit, integration and end-to-end — as a core part of the delivery process, not an afterthought"
+        tech: ["React JS", "JavaScript", "HTML/CSS", "SCSS", "Redux", "Cypress", "GitHub Copilot", "AI-assisted development"]
+
+      - client: "Sogei — SW Technology Innovation"
+        role: "Frontend Developer"
+        period: "Dec 2023 — Jun 2025"
+        highlights:
+          - "Developed and maintained a section of a public-facing government web portal serving millions of citizens"
+          - "Delivered WCAG-compliant, accessible UI components in React JS, tested across multiple browsers and screen sizes"
+          - "Drove code quality through systematic code reviews and automated testing cycles"
+        tech: ["React JS", "JavaScript"]
+
+      - client: "INPS — Portale INPS"
+        role: "Frontend Developer"
+        period: "Sep 2023 — Nov 2023"
+        highlights:
+          - "Developed frontend components for the INPS citizen portal on a .NET infrastructure"
+          - "Integrated React components with existing backend services via REST APIs"
+        tech: ["React JS", ".NET", "Visual Studio"]
+
+      - client: "Guardia di Finanza — Anagrafe Unica del Contribuente"
+        role: "Frontend Developer"
+        period: "Oct 2022 — Sep 2023"
+        highlights:
+          - "Contributed to frontend development of the taxpayer registry system, taking ownership of test case definition and functional validation cycles"
+          - "Defined test cases and contributed to project technical specifications"
+          - "Performed functional testing and QA validation"
+        tech: ["React JS", "SQL", "Visual Studio"]
+
+      - client: "FCA / Stellantis — Global Connectivity Platform"
+        role: "Technical Operations Developer"
+        period: "Sep 2021 — Feb 2024"
+        highlights:
+          - "Built Python CLI automation scripts to eliminate manual operational steps, reducing ticket-resolution time through scripted, repeatable workflows"
+          - "Managed API Gateway technical tickets via Drive IT (ServiceNow)"
+          - "Supported business continuity and capacity management activities"
+        tech: ["Python", "Linux", "Bash / CLI scripting", "ServiceNow / Drive IT", "Change Management"]
+
+      - client: "INPS — SW Technology Innovation (Knowledge Management)"
+        role: "SharePoint Developer"
+        period: "Mar 2021 — Nov 2021"
+        highlights:
+          - "Designed and developed INPS's internal Knowledge Management platform on SharePoint Online and SharePoint 2019"
+          - "Programmed in PowerShell, C#, JavaScript and TypeScript for platform customisation"
+        tech: ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
+
+      - client: "INPS — SW Technology Innovation (Agorà Social Network)"
+        role: "SharePoint Developer"
+        period: "Oct 2020 — Mar 2021"
+        highlights:
+          - "Contributed to the development of 'Agorà', INPS's internal social network platform"
+          - "Built features using SharePoint Online/2019 with React JS and C# customisations and pure JavaScript for certain external plugins"
+          - "Handled development, testing and maintenance tasks across the full feature lifecycle"
+        tech: ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
+
+education:
+  - institution: "ITIS G. Armellini — Rome"
+    degree: "Technical High School Diploma — Computer Science & Telecommunications"
+    period: "2016 — 2020"
+    notes: ""
+
+skills:
+  - category: "Practices"
+    items: ["Prompt Engineering", "AI-assisted development", "Code Review", "TDD", "Agile / Scrum", "REST APIs", "Ticket Management"]
+  - category: "Tools & Infrastructure"
+    items: ["GitHub Copilot", "Bash / CLI scripting", "Linux", "Git", "Docker", "CI/CD pipelines", "Visual Studio", "ServiceNow / Drive IT", "Apache Tomcat"]
+  - category: "Languages"
+    items: ["JavaScript", "TypeScript", "Python", "C#", "SQL", "Java"]
+  - category: "Frameworks & Platforms"
+    items: ["React JS", "Node.js", ".NET", "SharePoint Online", "SharePoint 2019", "Hugo", "SCSS"]
+
+languages:
+  - name: "Italian"
+    level: "Native"
+  - name: "English"
+    level: "Fluent (C2 — First Certificate in English)"
+  - name: "French"
+    level: "Basic (A2)"
+
+certifications:
+  - name: "Advanced React: Design System, Design Patterns, Performance"
+    issuer: "Udemy"
+    year: "2026"
+  - name: "React Testing Library and Jest: The Complete Guide"
+    issuer: "Udemy"
+    year: "2026"
+  - name: "Linux Green Software for Practitioners (LFC131)"
+    issuer: "Linux Foundation"
+    year: "2023"
+  - name: "Microsoft Azure AI Fundamentals (AI-900)"
+    issuer: "Microsoft"
+    year: "2020"
+
+interests:
+  - "Amateur writing & storytelling"
+  - "Open-source contributions"
+  - "Technology & innovation"
