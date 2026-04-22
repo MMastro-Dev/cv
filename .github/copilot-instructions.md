@@ -33,6 +33,7 @@ This is a **Hugo static site** that renders a professional CV from a single YAML
 - **CSS methodology**: BEM naming (`block__element`), CSS custom properties for theming. No CSS frameworks.
 - **Accessibility**: All sections use `aria-labelledby`, icons are `aria-hidden`, a skip-link is present, focus styles use `outline`, and colour contrast meets WCAG AA (4.5:1 minimum).
 - **Print-first colour choices**: The palette is intentionally neutral/greyscale so the CV retains its character when printed in B&W. Avoid introducing colours that don't degrade well to greyscale.
+- **Page budget**: Every CV (base and all variants) must fit in **1–2 A4 pages** when printed. When editing content, trim or consolidate to stay within this limit. `print.css` is tuned for this; do not add rules that cause overflow beyond 2 pages.
 - **No JavaScript**: The site is pure HTML + CSS. Do not add JS unless explicitly requested.
 - **Inline styles**: CSS is inlined via Hugo's `readFile` for single-request page loads. Do not use `<link>` stylesheet references.
 

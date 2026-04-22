@@ -4,8 +4,9 @@ services:
       context: .
       args:
         # Override with your public domain for production:
-        #   BASE_URL=https://cv.example.com docker compose up --build
-        BASE_URL: http://localhost:8080
+        #   BASE_URL=https://cv.mmastro.dev docker compose up --build
+        BASE_URL: https://cv.mmastro.dev
+    image: git.mmastro.dev/maxim/cv:latest
     ports:
-      - "8080:80"
+      - "127.0.0.1:8001:80"
     restart: unless-stopped
