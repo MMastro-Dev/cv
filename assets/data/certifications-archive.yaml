@@ -1,0 +1,137 @@
+# ============================================================
+# CERTIFICATIONS ARCHIVE
+# Canonical record of all certifications: earned (active or
+# archived) and planned. This file is NOT a Hugo CV variant
+# and is not rendered as a site page — it is a reference file.
+#
+# status values:
+#   active   — currently on cv.yaml
+#   archived — earned but removed from active CV
+#   planned  — not yet earned; on the roadmap
+# ============================================================
+
+certifications:
+
+  # ── Active (on cv.yaml) ─────────────────────────────────
+
+  - name: "Advanced React: Design System, Design Patterns, Performance"
+    issuer: "Udemy"
+    year: "2026"
+    status: "active"
+
+  - name: "React Testing Library and Jest: The Complete Guide"
+    issuer: "Udemy"
+    year: "2026"
+    status: "active"
+
+  - name: "Linux Green Software for Practitioners (LFC131)"
+    issuer: "Linux Foundation"
+    year: "2023"
+    status: "active"
+
+  - name: "Microsoft Azure AI Fundamentals (AI-900)"
+    issuer: "Microsoft"
+    year: "2020"
+    status: "active"
+    notes: "Pairs with planned AI-200."
+
+  # ── Archived (earned; removed from active CV April 2026) ─
+
+  - name: "CCNA1: Introduction to Networks"
+    issuer: "Cisco Networking Academy"
+    year: "2019"
+    status: "archived"
+    notes: >
+      Removed from active CV April 2026. CCNA1 is a Networking Academy
+      module, not the full CCNA certification (exam 200-301). Seven years
+      old; no signal value for AI/platform roles.
+
+  - name: "30h Course on Applied Robotics"
+    issuer: "Istituto Tecnico Industriale A. Pacinotti"
+    year: "2015"
+    status: "archived"
+    notes: >
+      Removed from active CV April 2026. High-school era; eleven years
+      old; no signal value for current target roles.
+
+  # ── Planned ─────────────────────────────────────────────
+
+  - name: "LFD121 — Developing Secure Software"
+    issuer: "Linux Foundation"
+    target: "2026 Q2–Q3"
+    status: "planned"
+    funding: "free"
+    notes: "Secure-coding signal; enrol immediately, run alongside AI-200 prep."
+
+  - name: "AI-200 — Azure AI Cloud Developer Associate"
+    issuer: "Microsoft"
+    target: "2026 Q2–Q3"
+    status: "planned"
+    funding: "employer-sponsored"
+    notes: >
+      Core alignment with AI direction; pairs with AI-900. Replaces
+      retiring AI-102 (AI Engineer Associate, retires June 30 2026).
+
+  - name: "AZ-104 — Azure Administrator"
+    issuer: "Microsoft"
+    target: "2026 Q3–Q4"
+    status: "planned"
+    funding: "employer-sponsored"
+    notes: "Prereq for AZ-305; broad hands-on Azure foundation."
+
+  - name: "NCA-GENL — NVIDIA Certified Associate: Generative AI and LLMs"
+    issuer: "NVIDIA"
+    target: "2026 Q4"
+    status: "planned"
+    funding: "self-fund (~$135)"
+    notes: >
+      Vendor-neutral LLM/RAG/prompt-engineering signal. Closes the gap
+      left by Azure-specific certs — nothing on the CV currently says
+      "understands LLMs at a system level." Recognised beyond continental
+      Europe. Added April 2026 after job-fitness analysis of agentic roles.
+
+  - name: "AZ-305 — Azure Solutions Architect Expert"
+    issuer: "Microsoft"
+    target: "2027 H1"
+    status: "planned"
+    funding: "employer-sponsored"
+    notes: >
+      Only if real Azure architecture work is happening by then.
+      Paper cert without practice will not survive a technical interview.
+      Fork point: if Azure hands-on work has not materialised, pick
+      Databricks Generative AI Engineer Associate instead.
+
+  - name: "Databricks Generative AI Engineer Associate"
+    issuer: "Databricks"
+    target: "2027 H1"
+    status: "planned"
+    funding: "self-fund"
+    notes: >
+      Alternative or complement to AZ-305. Recognition growing fast in
+      AI-adjacent product companies (the target list). Heavy overlap with
+      Projects C+D RAG/pipeline work, so studying it doubles as project
+      practice. Added April 2026 after job-fitness analysis of agentic roles.
+
+  - name: "GCP Professional ML Engineer"
+    issuer: "Google Cloud"
+    target: "2027 H2"
+    status: "planned"
+    funding: "self-fund"
+    notes: >
+      Differentiated niche; GCP's Vertex/Gemini tooling is strong and
+      fewer candidates hold this cert. Stronger international signal than
+      generic GCP Associate.
+
+  - name: "Terraform Associate or CKAD"
+    issuer: "HashiCorp / CNCF"
+    target: "2028"
+    status: "planned"
+    funding: "self-fund"
+    notes: "Pick based on whether IaC or container orchestration direction is clearer by then."
+
+  - name: "AWS Solutions Architect Associate (SAA)"
+    issuer: "AWS"
+    target: "2028+ optional"
+    status: "planned"
+    funding: "self-fund"
+    notes: "Optional. Only if targeting US/UK remote markets specifically."

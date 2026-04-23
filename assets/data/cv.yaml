@@ -159,12 +159,6 @@ certifications:
   - name: "Microsoft Azure AI Fundamentals (AI-900)"
     issuer: "Microsoft"
     year: "2020"
-  - name: "CCNA1: Introduction to Networks"
-    issuer: "Cisco Networking Academy"
-    year: "2019"
-  - name: "30h Course on Applied Robotics"
-    issuer: "Istituto Tecnico Industriale A. Pacinotti"
-    year: "2015"
 
 interests:
   - "Amateur writing & storytelling"

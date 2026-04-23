@@ -12,6 +12,13 @@ You are acting as an experienced technical recruiter. Your goal is to help the c
 
 The candidate's CV data is in `assets/data/cv.yaml`. Read it before starting any analysis.
 
+Also read `assets/data/certifications-archive.yaml` before any cert-related analysis. This file is the canonical record of all certifications with statuses:
+- `active` — currently on the CV
+- `archived` — earned but removed from the active CV (still real credentials; can be mentioned in an interview or re-added if relevant)
+- `planned` — on the roadmap but not yet earned
+
+Use the archive when analysing keyword gaps (a `planned` cert that the role requires is a near-term bridge, not a hard gap), when suggesting new certs, and when checking for retirement/outdated certs. Do not suggest adding a cert already in the archive as `planned` without noting it is already tracked there.
+
 The methodology is based on the article *"Get Past AI Recruiter Gatekeepers with ChatGPT Prompts"* (Career Pivot / Guillaume Foutry): understand how AI-powered ATS systems score resumes, then apply the same lens to improve the candidate's fit.
 
 ---
@@ -178,7 +185,7 @@ Present as a simple table:
 |---|-----|-----|------|
 | **Gross/year (€)** | … | … | … |
 
-Add a one-paragraph note on what levers could push the candidate toward the higher end (e.g. negotiating strategy, certifications, seniority framing) and any factors that might cap it (e.g. public-sector pay scales, company size).
+Add a one-paragraph note on what levers could push the candidate toward the higher end (e.g. negotiating strategy, certifications, seniority framing) and any factors that might cap it (e.g. public-sector pay scales, company size). When referencing certs as levers, cross-check `assets/data/certifications-archive.yaml` — note which are already `planned` vs. would be new additions.
 
 ### Step 6 — Offer tailored CV variant
 

@@ -15,7 +15,7 @@ The guiding principle: **a change that belongs to the base CV should appear in a
 ## Context
 
 - **Base CV**: `assets/data/cv.yaml`
-- **Variant files**: all files matching `assets/data/cv.*.yaml` (e.g. `cv.canonical-frontend.yaml`, `cv.mc-engineering.yaml`)
+- **Variant files**: all files matching `assets/data/cv.*.yaml` **except** `assets/data/certifications-archive.yaml` — the archive is not a CV variant and must never be modified by this skill
 - **Content pages**: matching `content/{slug}.md` files (these rarely need changes — only update if `title` changed)
 - The variant's tailoring focus is declared in the comment header at the top of the file (line starting with `# Tailored to:`) and is also evident from differences in `summary`, skill ordering, and any variant-specific bullet rewrites
 
@@ -64,7 +64,7 @@ For each variant × each change, apply the following rules:
 | `personal.*` | All fields — contact info is always universal |
 | `education` | Always sync; it never conflicts with a tailored narrative |
 | `languages` | Always sync |
-| `certifications` | Sync unless the cert is clearly off-brand for the variant (e.g. a cloud cert in a Linux-systems variant is fine; an unrelated business cert in a deep-tech variant can be skipped — use judgement) |
+| `certifications` | Sync unless the cert is clearly off-brand for the variant (e.g. a cloud cert in a Linux-systems variant is fine; an unrelated business cert in a deep-tech variant can be skipped — use judgement). When syncing a cert addition, also update `assets/data/certifications-archive.yaml`: add the entry with `status: active` if it is new, or update from `planned` to `active` if it was already in the archive. Never touch the `archived` entries. |
 | `interests` | Sync; reorder only if an interest is particularly relevant to the variant's focus |
 
 #### Propagate with adaptation
