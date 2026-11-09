@@ -16,6 +16,11 @@
   <style media="print">
     {{- readFile "assets/css/print.css" | safeCSS -}}
   </style>
+  {{ if .Site.Params.printColor }}
+  <style media="print">
+    {{- readFile "assets/css/print-color.css" | safeCSS -}}
+  </style>
+  {{ end }}
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>

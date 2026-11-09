@@ -1,0 +1,33 @@
+:root {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+a,
+.card__contact a {
+  color: var(--color-link);
+}
+
+.card {
+  border-bottom-color: var(--color-accent);
+}
+
+.card__name,
+.card__title,
+.section__title,
+.skills__category {
+  color: var(--color-accent);
+}
+
+.section__title,
+.entry__projects {
+  border-color: var(--color-border);
+}
+
+.skills__item,
+.entry__tech-tag,
+.tag {
+  background: var(--color-surface);
+  border-color: var(--color-surface-border);
+  color: var(--color-surface-text);
+}

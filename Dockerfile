@@ -18,7 +18,7 @@ RUN hugo --gc --minify --baseURL "${BASE_URL}"
 RUN chromium-browser --headless --disable-gpu --no-sandbox \
       --run-all-compositor-stages-before-draw \
       --print-to-pdf=/src/public/cv.pdf \
-      --print-to-pdf-no-header \
+      --no-pdf-header-footer \
       "file:///src/public/index.html" 2>/dev/null \
     || echo "WARNING: PDF generation skipped"
 

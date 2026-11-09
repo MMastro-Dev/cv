@@ -10,7 +10,7 @@ A minimalist, data-driven CV website built with [Hugo](https://gohugo.io/). Edit
 - **Tailored variant library** — generate company-specific CV pages at `/canonical-frontend/`, `/mc-engineering/`, etc., each from its own YAML
 - **PDF download** — a download button on every page; CI/CD auto-generates a print-ready PDF via headless Chromium on every deploy
 - **Accessibility** — WCAG 2.1 AA compliant (skip-link, `aria-labelledby`, `aria-hidden` icons, focus styles, 4.5:1 contrast)
-- **Print-first design** — A4 layout, greyscale-safe palette, clean B&W output
+- **Print-first design** — A4 layout, color accents by default, optional B&W output
 - **No JavaScript** — pure HTML + CSS; zero client-side dependencies
 - **AI skills** — GitHub Copilot agent skills for job fitness analysis and cross-variant syncing (see [AI Skills](#ai-skills))
 
@@ -50,7 +50,8 @@ cv/
 ├── assets/
 │   ├── css/
 │   │   ├── main.css              # Screen stylesheet (BEM, CSS custom properties)
-│   │   └── print.css             # Print/PDF stylesheet (A4, B&W)
+│   │   ├── print.css             # Preserved print/PDF layout (A4, B&W)
+│   │   └── print-color.css       # Optional color-only print overrides
 │   └── data/
 │       ├── cv.yaml               # ← Canonical CV — always edit here first
 │       ├── cv.canonical-frontend.yaml   # Tailored variant example
@@ -147,8 +148,12 @@ The image is a two-stage build: `debian:bookworm-slim` installs Hugo Extended + 
 
 ```bash
 hugo --gc --minify
-chrome --headless --print-to-pdf=public/cv.pdf --print-to-pdf-no-header public/index.html
+chrome --headless --print-to-pdf=public/cv.pdf --no-pdf-header-footer public/index.html
 ```
+
+Color printing is enabled by `printColor = true` under `[params]` in `hugo.toml`. Set it to `false` to use the unchanged black-and-white stylesheet. Rebuild the Docker image to regenerate the downloadable PDF after changing print styles.
+
+The PDF command suppresses browser-generated headers and footers, including the file path. For manual browser printing, disable **Headers and footers** in the print dialog, select **Color**, and enable **Background graphics** for colored tags.
 
 ### CI/CD (Gitea Actions)
 
@@ -214,6 +219,7 @@ title   = 'CV — Your Name'
 [params]
   description = 'Professional CV / Resume'
   author      = 'Your Name'
+  printColor  = true
 ```
 
 ---

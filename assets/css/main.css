@@ -165,12 +165,12 @@ a:focus-visible {
   transition: background-color 0.15s ease;
 }
 
-.card__download:hover,
+/* .card__download:hover,
 .card__download:focus {
   background: var(--color-text);
   border-color: var(--color-text);
   border-bottom: none;
-}
+} */
 
 .card__download:focus-visible {
   outline: 2px solid var(--color-accent);
