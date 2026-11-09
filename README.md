@@ -151,6 +151,8 @@ hugo --gc --minify
 chrome --headless --print-to-pdf=public/cv.pdf --no-pdf-header-footer public/index.html
 ```
 
+The Docker build generates a separate `cv.pdf` beside every CV page, including `/cv-italian/cv.pdf`. PDF generation remains best-effort, with warnings identifying any failed page.
+
 Color printing is enabled by `printColor = true` under `[params]` in `hugo.toml`. Set it to `false` to use the unchanged black-and-white stylesheet. Rebuild the Docker image to regenerate the downloadable PDF after changing print styles.
 
 The PDF command suppresses browser-generated headers and footers, including the file path. For manual browser printing, disable **Headers and footers** in the print dialog, select **Color**, and enable **Background graphics** for colored tags.

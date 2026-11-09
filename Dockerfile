@@ -15,12 +15,18 @@ COPY . .
 RUN hugo --gc --minify --baseURL "${BASE_URL}"
 
 # PDF generation is best-effort; warns and continues if Chromium fails.
-RUN chromium-browser --headless --disable-gpu --no-sandbox \
-      --run-all-compositor-stages-before-draw \
-      --print-to-pdf=/src/public/cv.pdf \
-      --no-pdf-header-footer \
-      "file:///src/public/index.html" 2>/dev/null \
-    || echo "WARNING: PDF generation skipped"
+RUN find /src/public -type f -name index.html -exec sh -c '\
+      for html do \
+        pdf="${html%index.html}cv.pdf"; \
+        echo "Generating PDF: $pdf"; \
+        chromium-browser --headless --disable-gpu --no-sandbox \
+          --run-all-compositor-stages-before-draw \
+          --print-to-pdf="$pdf" \
+          --no-pdf-header-footer \
+          "file://$html" 2>/dev/null \
+          && test -s "$pdf" \
+          || echo "WARNING: PDF generation skipped for $html"; \
+      done' sh {} +
 
 # ── Stage 2: Serve ────────────────────────────────────────────────────────────
 # Copies only the built static files into a minimal nginx image.
