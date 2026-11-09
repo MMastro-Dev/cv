@@ -3,19 +3,31 @@
   print-color-adjust: exact;
 }
 
-a,
-.card__contact a {
+body {
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
   color: var(--color-link);
 }
 
-.card {
-  border-bottom-color: var(--color-accent);
+.card__title,
+.card__contact,
+.card__contact a,
+.summary,
+.entry__period,
+.entry__org,
+.entry__client,
+.entry__list {
+  color: var(--color-text-secondary);
 }
 
-.card__name,
-.card__title,
-.section__title,
-.skills__category {
+.card {
+  border-bottom-color: var(--color-text);
+}
+
+.section__title {
   color: var(--color-accent);
 }
 
