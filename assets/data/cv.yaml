@@ -99,7 +99,6 @@ experience:
         highlights:
           - "Contributed to the development of 'Agorà', INPS's internal social network platform"
           - "Built features using SharePoint Online/2019 with React JS and C# customisations and pure JavaScript for certain external plugins"
-          - "Handled development, testing and maintenance tasks across the full feature lifecycle"
         tech:
           ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
 
@@ -162,9 +161,13 @@ certifications:
 
 interests:
   - "Amateur writing & storytelling"
+  - "Parkour"
+  - "Photography and Videography"
   - "Travel and cultural exploration"
-  - "Photography"
+  - "Music and playing instruments"
+  - "AI and Machine Learning"
   - "Open-source projects"
+  - "Gaming"
   - "Homelabbing"
   - "Robotics"
   - "DIY Projects"

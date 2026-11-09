@@ -1,0 +1,169 @@
+personal:
+  name: "Maximilian Mastrogiacomo"
+  title: "Sviluppatore software"
+  email: "maximilian.mastrogiacomo@gmail.com"
+  phone: "+39 3455852920"
+  location: "Roma, Italia"
+  website: "https://mmastro.dev"
+  linkedin: "https://www.linkedin.com/in/maximilian-mastrogiacomo-716725179/"
+  github: "https://github.com/MMastro-Dev"
+  summary: >
+    Sviluppatore frontend con oltre 5 anni di esperienza nella realizzazione di
+    applicazioni web accessibili, responsive e production-ready con React, TypeScript e C# per
+    grandi piattaforme pubbliche e aziendali. Specializzato nel lavoro in team "Agile" e contesti regolamentati: pubblica
+    amministrazione, finanza e grandi enti privati. Esperienza nell'integrazione di API
+    REST, nello sviluppo guidato dai test (TDD) e nella revisione del codice.
+    Familiarità con strumenti di sviluppo su Linux e tecnologie open source;
+    rapido adattamento a nuovi stack, team e ambienti di lavoro.
+
+experience:
+  - company: "AlmavivA S.p.A."
+    period: "Ott 2020 — oggi"
+    location: "Roma, Italia"
+    projects:
+      - client: "INPS — Ammortizzatori Sociali (Omnia)"
+        role: "Sviluppatore frontend"
+        period: "Giu 2025 — oggi"
+        highlights:
+          - "Sviluppo e manutenzione di componenti frontend per l'Istituto Nazionale della Previdenza Sociale (INPS), utilizzati da milioni di cittadini e aziende italiane per accedere agli Enti Previdenziali"
+          - "Garanzia della conformità WCAG sull'intera libreria di componenti: navigazione da tastiera, supporto agli screen reader e contrasto dei colori"
+          - "Coordinamento dei cicli di test (unit test, integration test e test end-to-end) per garantire qualità e affidabilità di un servizio pubblico essenziale"
+        tech:
+          [
+            "React JS",
+            "TypeScript",
+            "JavaScript",
+            "HTML/CSS",
+            "SCSS",
+            "Redux",
+            "Cypress",
+            "Copilot / sviluppo assistito dall'IA",
+          ]
+
+      - client: "Sogei — SW Technology Innovation"
+        role: "Sviluppatore frontend"
+        period: "Dic 2023 — Giu 2025"
+        highlights:
+          - "Sviluppo e manutenzione di una sezione del portale pubblico dell'Agenzia delle Entrate, utilizzato da milioni di cittadini per servizi e informazioni fiscali"
+          - "Realizzazione di componenti UI in React JS conformi alle WCAG, testati su diversi browser e dimensioni dello schermo per un'esperienza utente uniforme"
+          - "Mantenimento della qualità del codice tramite revisioni e test automatici"
+        tech:
+          ["React JS", "JavaScript", "TypeScript", "HTML/CSS", "SCSS", "Redux"]
+
+      - client: "INPS — Portale INPS"
+        role: "Sviluppatore frontend"
+        period: "Set 2023 — Nov 2023"
+        highlights:
+          - "Sviluppo di componenti frontend per il portale INPS rivolto ai cittadini, su infrastruttura .NET"
+          - "Integrazione di componenti React con i servizi backend esistenti tramite API REST"
+        tech: ["React JS", ".NET", "Visual Studio"]
+
+      - client: "Guardia di Finanza — Anagrafe Unica del Contribuente"
+        role: "Sviluppatore frontend"
+        period: "Ott 2022 — Set 2023"
+        highlights:
+          - "Supporto allo sviluppo frontend del sistema interno di anagrafe dei contribuenti della Guardia di Finanza"
+          - "Definizione di casi di test e contributo alle specifiche tecniche di progetto, in linea con i requisiti funzionali e normativi"
+          - "Esecuzione di test funzionali e verifiche di accettazione per confermare la correttezza delle funzionalità e l'affidabilità del sistema"
+        tech: ["React JS", "SQL", "Visual Studio"]
+
+      - client: "FCA / Stellantis — Global Connectivity Platform"
+        role: "Sviluppatore per le operazioni tecniche"
+        period: "Set 2021 — Feb 2024"
+        highlights:
+          - "Gestione dei ticket tecnici dell'API Gateway tramite Drive IT (ServiceNow) per la Global Connectivity Platform di FCA / Stellantis, che offre servizi connessi ad alcuni dei principali marchi automobilistici mondiali"
+          - "Sviluppo di script Python per automatizzare attività operative ricorrenti e migrare l'intera configurazione dell'API Gateway a una nuova versione della piattaforma senza interruzioni del servizio"
+          - "Gestione della capacità e monitoraggio della disponibilità di una piattaforma globale in produzione per servizi dedicati ai veicoli connessi"
+          - "Collaborazione diretta, in più lingue, con clienti e team tecnici in Europa e Nord America"
+        tech: ["Python", "Linux", "ServiceNow / Drive IT", "Change Management"]
+
+      - client: "INPS — SW Technology Innovation (Knowledge Management)"
+        role: "Sviluppatore SharePoint"
+        period: "Mar 2021 — Nov 2021"
+        highlights:
+          - "Progettazione e sviluppo della piattaforma interna di Knowledge Management dell'INPS su SharePoint Online e SharePoint 2019"
+          - "Programmazione in PowerShell, C#, JavaScript e TypeScript per la personalizzazione della piattaforma"
+        tech:
+          ["SharePoint Online", "C#", "TypeScript", "JavaScript", "PowerShell"]
+
+      - client: "INPS — SW Technology Innovation (Agorà Social Network)"
+        role: "Sviluppatore SharePoint"
+        period: "Ott 2020 — Mar 2021"
+        highlights:
+          - "Contributo allo sviluppo di 'Agorà', il social network interno dell'INPS"
+          - "Realizzazione di funzionalità su SharePoint Online/2019 con personalizzazioni in React JS e C# e JavaScript puro per alcuni plugin esterni"
+        tech:
+          ["SharePoint Online", "React JS", "C#", "JavaScript", "PowerShell"]
+
+education:
+  - institution: "ITIS G. Armellini — Roma"
+    degree: "Diploma di Istituto Tecnico — Informatica e Telecomunicazioni"
+    period: "2016 — 2020"
+    notes: "Voto finale: 100/100"
+
+skills:
+  - category: "Linguaggi"
+    items: ["JavaScript", "TypeScript", "C#", "Python", "SQL", "Java"]
+  - category: "Framework e piattaforme"
+    items:
+      [
+        "React JS",
+        "Node.js",
+        ".NET",
+        "SharePoint Online",
+        "SharePoint 2019",
+        "Hugo",
+        "SCSS",
+      ]
+  - category: "Strumenti e infrastruttura"
+    items:
+      [
+        "Visual Studio",
+        "Linux",
+        "Git",
+        "ServiceNow / Drive IT",
+        "Apache Tomcat",
+        "Docker",
+        "Pipeline CI/CD",
+      ]
+  - category: "Pratiche di sviluppo"
+    items:
+      ["TDD", "Agile / Scrum", "Revisione del codice", "Gestione dei ticket", "API REST"]
+
+languages:
+  - name: "Italiano"
+    level: "Madrelingua"
+  - name: "Inglese"
+    level: "Fluente (C1 — First Certificate in English)"
+  - name: "Francese"
+    level: "Base (A2)"
+
+certifications:
+  - name: "Advanced React: Design System, Design Patterns, Performance"
+    issuer: "Udemy"
+    year: "2026"
+  - name: "React Testing Library and Jest: The Complete Guide"
+    issuer: "Udemy"
+    year: "2026"
+  - name: "Linux Green Software for Practitioners (LFC131)"
+    issuer: "Linux Foundation"
+    year: "2023"
+  - name: "Microsoft Azure AI Fundamentals (AI-900)"
+    issuer: "Microsoft"
+    year: "2020"
+
+interests:
+  - "Scrittura amatoriale"
+  - "Parkour"
+  - "Fotografia e videografia"
+  - "Viaggi e scoperta di altre culture"
+  - "Musica e strumenti musicali"
+  - "Intelligenza artificiale e machine learning"
+  - "Progetti open source"
+  - "Videogiochi"
+  - "Homelabbing"
+  - "Robotica"
+  - "Progetti fai da te"
+  - "Vela"
+  - "Arrampicata"
+  - "Campeggio ed escursionismo"
